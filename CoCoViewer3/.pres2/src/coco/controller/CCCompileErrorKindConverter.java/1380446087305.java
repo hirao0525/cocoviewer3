@@ -1,0 +1,29 @@
+package coco.controller;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+import coco.model.CCCompileErrorManager;
+
+public class CCCompileErrorKindConverter extends CCFileLoader {
+
+	CCCompileErrorManager manager;
+	private FileWriter out;
+
+	public CCCompileErrorKindConverter(CCCompileErrorManager manager) {
+		this.manager = manager;
+	}
+
+	public void convertData(String infile, String outfile) {
+		out = new FileWriter(outfile);
+		out.write("ErrorID,ÉtÉ@ÉCÉãñº,î≠ê∂éûçè,èCê≥éûä‘\n");
+		loadData(infile);
+		out.close();
+	}
+
+	@Override
+	protected void separeteData(String line) throws IOException {
+
+	}
+
+}
