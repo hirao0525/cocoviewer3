@@ -1,13 +1,13 @@
 package coco.view;
 
 import java.awt.BasicStroke;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 
 import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartMouseEvent;
-import org.jfree.chart.ChartMouseListener;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.StandardChartTheme;
@@ -19,11 +19,10 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 import coco.model.CCCompileErrorList;
 
-public class CCErrorElementButton2 extends JButton implements
-		ChartMouseListener {
+public class CCErrorElementButton2 extends JButton implements MouseListener {
 
 	/**
-	 * 
+	 * minigraphを表示する
 	 */
 	private static final long serialVersionUID = 1L;
 
@@ -39,6 +38,7 @@ public class CCErrorElementButton2 extends JButton implements
 		this.width = width;
 		this.height = height;
 		super.setLayout(null);
+		addMouseListener(this);
 		// initialize(list);
 		makeGraph();
 	}
@@ -92,25 +92,40 @@ public class CCErrorElementButton2 extends JButton implements
 		renderer.setSeriesShapesVisible(0, true);
 
 		ChartPanel chartpanel = new ChartPanel(chart);
-		chartpanel.addChartMouseListener(this);
+		chartpanel.addMouseListener(this);
 		chartpanel.setBounds(0, 0, width, height);
 
 		// TODO: ToolTipが上手く表示できない
-		// chartpanel.setToolTipText(list.getErrors().size() + " : "
-		// + list.getMessage());
-		// chartpanel.setDisplayToolTips(true);
+		chartpanel.setToolTipText(list.getErrors().size() + " : "
+				+ list.getMessage());
+		chartpanel.setDisplayToolTips(true);
 		// デバッグ用
-		// System.out.println(chartpanel.getToolTipText());
+		System.out.println(chartpanel.getToolTipText());
 
 		add(chartpanel);
 	}
 
-	public void chartMouseClicked(ChartMouseEvent e) {
+	@Override
+	public void mouseClicked(MouseEvent e) {
 		CCGraphFrame frame = new CCGraphFrame();
 		frame.initialize(list);
 	}
 
-	public void chartMouseMoved(ChartMouseEvent e) {
+	@Override
+	public void mousePressed(MouseEvent e) {
+	}
 
+	@Override
+	public void mouseReleased(MouseEvent e) {
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// debug
+		System.out.println(list.getErrors().size() + " : " + list.getMessage());
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
 	}
 }

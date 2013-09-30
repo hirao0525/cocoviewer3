@@ -30,8 +30,8 @@ public class CCCompileErrorConverter extends CCFileLoader {
 		String[] tokenizer = line.split(",");
 		// TODO: CSVを扱うことが出来るライブラリを用いた形に変更する
 		// errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
-		int errorID = manager.getMessagesID(tokenizer[3]);
-		String filename = tokenizer[2];
+		int errorID = manager.getMessagesID(tokenizer[5]);
+		String filename = tokenizer[4];
 
 		// TODO: 変換方式を考えること
 		// play(java.util.ArrayList<java.lang.String>,java.util.ArrayList<java.lang.Integer>)

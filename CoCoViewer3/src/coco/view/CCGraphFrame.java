@@ -4,6 +4,7 @@ import java.awt.BasicStroke;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JToolTip;
 
 import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
@@ -92,10 +93,19 @@ public class CCGraphFrame extends JFrame {
 		renderer.setSeriesShapesVisible(0, true);
 
 		// グラフをJPanel上に配置する
-		ChartPanel cpanel = new ChartPanel(chart);
-		cpanel.setBounds(0, 0, width - 15, height - 50);
-		cpanel.setDisplayToolTips(true);
-		rootPanel.add(cpanel);
+		ChartPanel chartpanel = new ChartPanel(chart);
+		chartpanel.setBounds(0, 0, width - 15, height - 50);
+
+		JToolTip tooltip = new JToolTip();
+		chartpanel.setToolTipText(list.getErrors().size() + " : "
+				+ list.getMessage());
+		tooltip.setComponent(chartpanel);
+		chartpanel.setDisplayToolTips(true);
+		// デバッグ用
+		System.out.println(chartpanel.getToolTipText());
+
+		chartpanel.setDisplayToolTips(true);
+		rootPanel.add(chartpanel);
 		add(rootPanel);
 	}
 

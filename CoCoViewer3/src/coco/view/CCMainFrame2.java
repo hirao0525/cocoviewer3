@@ -112,9 +112,9 @@ public class CCMainFrame2 extends JFrame {
 	private void setEmptyPanel(int x, int y) {
 		JButton emptyButton = new JButton("ñ¢î≠ê∂");
 		emptyButton.setEnabled(false);
+		emptyButton.setToolTipText("ñ¢î≠ê∂Ç≈Ç∑ÇÊ");
 		emptyButton.setBackground(Color.GRAY);
 		emptyButton.setBounds(x, y, ERRORBUTTONWIDTH, ERRORBUTTONHEIGHT);
 		rootPanel.add(emptyButton);
 	}
-
 }

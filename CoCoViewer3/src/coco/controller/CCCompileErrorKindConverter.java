@@ -34,12 +34,12 @@ public class CCCompileErrorKindConverter extends CCFileLoader {
 
 		// getMessageID‚µ‚Änull‚È‚ç–¢“o˜^‚È‚Ì‚Å“o˜^‚µ‚Ä‘‚«‚Ş
 		try {
-			if (manager.getMessagesID(tokanizer[3]) <= 0) {
+			if (manager.getMessagesID(tokanizer[5]) <= 0) {
 				System.out.println("error!");
 			}
 		} catch (Exception e) {
-			manager.put(errorID, tokanizer[3]);
-			out.write(errorID + "," + tokanizer[3] + "\n");
+			manager.put(errorID, tokanizer[5]);
+			out.write(errorID + "," + tokanizer[5] + "\n");
 			errorID++;
 		}
 	}
