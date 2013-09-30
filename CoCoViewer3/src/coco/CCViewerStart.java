@@ -7,9 +7,10 @@ import coco.view.CCMainFrame2;
 
 public class CCViewerStart {
 
-	/********************************
-	 * Viewer main method
-	 ********************************/
+	/**
+	 * Viewer Main
+	 * 
+	 */
 
 	public static void main(String[] args) {
 		new CCViewerStart().run();

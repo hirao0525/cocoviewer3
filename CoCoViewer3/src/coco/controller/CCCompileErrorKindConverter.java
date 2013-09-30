@@ -6,10 +6,9 @@ import java.io.IOException;
 import coco.model.CCCompileErrorManager;
 
 /**
+ * CompileError.csv‚©‚çerrorKinds.txt‚ğì‚éƒvƒƒOƒ‰ƒ€–{‘Ì
  * 
  * @author student
- * @param CompileError
- *            .csv‚©‚çerrorKinds.txt‚ğì‚éƒvƒƒOƒ‰ƒ€
  * 
  */
 public class CCCompileErrorKindConverter extends CCFileLoader {
@@ -32,6 +31,8 @@ public class CCCompileErrorKindConverter extends CCFileLoader {
 	@Override
 	protected void separeteData(String line) throws IOException {
 		String[] tokanizer = line.split(",");
+
+		// getMessageID‚µ‚Änull‚È‚ç–¢“o˜^‚È‚Ì‚Å“o˜^‚µ‚Ä‘‚«‚Ş
 		try {
 			if (manager.getMessagesID(tokanizer[3]) <= 0) {
 				System.out.println("error!");

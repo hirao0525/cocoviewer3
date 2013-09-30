@@ -11,6 +11,7 @@ import org.jfree.chart.ChartMouseListener;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.StandardChartTheme;
+import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
@@ -76,7 +77,14 @@ public class CCErrorElementButton2 extends JButton implements
 		// 背景色のセット
 		chart.setBackgroundPaint(ChartColor.WHITE);
 
+		// Plotクラスを準備
 		CategoryPlot plot = chart.getCategoryPlot();
+
+		// 縦軸の設定 ・ 軸は整数値のみを指すようにする
+		NumberAxis numberAxis = (NumberAxis) plot.getRangeAxis();
+		numberAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+
+		// プロットの設定
 		LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot
 				.getRenderer();
 		renderer.setSeriesPaint(0, ChartColor.RED);

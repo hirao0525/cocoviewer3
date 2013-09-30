@@ -8,8 +8,7 @@ import coco.model.CCCompileErrorManager;
 
 public class CCConverterStart {
 
-	/***********************
-	 * 
+	/**
 	 * Converter Start
 	 * 
 	 * @throws IOException
@@ -29,6 +28,5 @@ public class CCConverterStart {
 				manager);
 		errormaker.convertData("testbase/compileError.csv",
 				"testbase/compileError.log");
-		System.out.println("compileError.log created!");
 	}
 }
