@@ -65,7 +65,7 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 		}
 
 		// TODO: グラフの生成 messageが長すぎる場合、短くする処理をどうするか
-		// 10文字くらいで区切って、ToolTipで保管する手段を考え中
+		// 10文字くらいで区切って、ToolTipで補完する手段を考え中
 		String message = list.getMessage();
 		if (list.getMessage().length() > 10) {
 			message = message.substring(0, 9) + "...";
@@ -83,6 +83,9 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 		// 縦軸の設定 ・ 軸は整数値のみを指すようにする
 		NumberAxis numberAxis = (NumberAxis) plot.getRangeAxis();
 		numberAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+		numberAxis.setVerticalTickLabels(false);
+		numberAxis.setAutoRangeStickyZero(true);
+		numberAxis.setRangeWithMargins(0, 60);
 
 		// プロットの設定
 		LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot

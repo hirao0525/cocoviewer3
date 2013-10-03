@@ -1,6 +1,8 @@
 package coco.view;
 
 import java.awt.BasicStroke;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -19,7 +21,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 import coco.model.CCCompileErrorList;
 
-public class CCGraphFrame extends JFrame {
+public class CCGraphFrame extends JFrame implements MouseListener {
 
 	/**
 	 * 
@@ -48,7 +50,6 @@ public class CCGraphFrame extends JFrame {
 		setTitleData();
 
 		makeGraph();
-		// makeGraph2(ceds);
 
 		setVisible(true);
 	}
@@ -59,7 +60,6 @@ public class CCGraphFrame extends JFrame {
 		setTitle(APP_NAME + " " + VERSION + " - " + list.getMessage() + " の詳細");
 	}
 
-	// なんかイマイチなので自分で作成したグラフを使う予定・暫定でこっち
 	private void makeGraph() {
 		// 日本語が文字化けしないテーマ
 		ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
@@ -68,6 +68,7 @@ public class CCGraphFrame extends JFrame {
 		for (int i = 0; i < list.getErrors().size(); i++) {
 			dataset.addValue(list.getErrors().get(i).getCorrectTime(), "修正時間",
 					Integer.toString(i + 1));
+			System.out.println(dataset.getValue(0, i));
 		}
 
 		// グラフの生成
@@ -84,6 +85,9 @@ public class CCGraphFrame extends JFrame {
 		// 縦軸の設定 ・ 軸は整数値のみを指すようにする
 		NumberAxis numberAxis = (NumberAxis) plot.getRangeAxis();
 		numberAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+		numberAxis.setVerticalTickLabels(false);
+		numberAxis.setAutoRangeStickyZero(true);
+		numberAxis.setRange(0, 120);
 
 		// プロットの設定
 		LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot
@@ -95,43 +99,41 @@ public class CCGraphFrame extends JFrame {
 		// グラフをJPanel上に配置する
 		ChartPanel chartpanel = new ChartPanel(chart);
 		chartpanel.setBounds(0, 0, width - 15, height - 50);
+		chartpanel.addMouseListener(this);
 
 		JToolTip tooltip = new JToolTip();
 		chartpanel.setToolTipText(list.getErrors().size() + " : "
 				+ list.getMessage());
 		tooltip.setComponent(chartpanel);
 		chartpanel.setDisplayToolTips(true);
-		// デバッグ用
-		System.out.println(chartpanel.getToolTipText());
 
 		chartpanel.setDisplayToolTips(true);
 		rootPanel.add(chartpanel);
 		add(rootPanel);
 	}
 
-	// 自分で制作したグラフ
-	// private void makeGraph2(CompileErrorDate ced) {
-	// JPanel graphPanel = new JPanel();
-	// JLabel graphTitle = new JLabel(ced.getMassage());
-	// graphPanel.setBounds(width / 2, height / 2, width, height);
-	// graphPanel.add(graphTitle);
-	// graphTitle.setBounds(width / 2, 10, 600, 28);
-	// add(graphPanel);
-	//
-	// }
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		System.out.println("Can click!");
+	}
 
-	/************************
-	 * for window size test
-	 ***********************/
-	// public static void main(String[] args) {
-	// CCGraphFrame sg = new CCGraphFrame();
-	// sg.run();
-	// }
-	//
-	// private void run() {
-	// setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-	// setSize(width, height);
-	// setTitle(APP_NAME + " " + VERSION + " error ");
-	// setVisible(true);
-	// }
+	@Override
+	public void mousePressed(MouseEvent e) {
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+
+	}
 }
