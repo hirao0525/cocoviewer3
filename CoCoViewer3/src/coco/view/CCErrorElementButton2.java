@@ -30,6 +30,7 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 	private int height;
 
 	private CCCompileErrorList list;
+	private CCGraphBackgroundColor graphcolor = new CCGraphBackgroundColor();
 
 	public CCErrorElementButton2(CCCompileErrorList list, int width, int height) {
 		this.list = list;
@@ -61,7 +62,7 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 				"修正時間", dataset, PlotOrientation.VERTICAL, false, false, false);
 
 		// 背景色のセット
-		chart.setBackgroundPaint(ChartColor.WHITE);
+		chart.setBackgroundPaint(graphcolor.graphColor(list.getRare()));
 
 		// Plotクラスを準備
 		CategoryPlot plot = chart.getCategoryPlot();
