@@ -89,14 +89,14 @@ public class CCMainFrame2 extends JFrame {
 		}
 
 		// ボタンを配置する
-		int i = 0;
+		int i = 1;
 		for (int x = 0; x < width - ERRORBUTTONWIDTH; x += ERRORBUTTONWIDTH) {
 			for (int y = 30; y < height - ERRORBUTTONHEIGHT; y += ERRORBUTTONHEIGHT) {
-				if (i < buttons.size()) {
-					if (manager.getList(i + 1).getErrors().size() > 0) {
-						buttons.get(i).setBounds(x, y, ERRORBUTTONWIDTH,
+				if (manager.getListsLength() > i) {
+					if (manager.getList(i).getErrors().size() > 0) {
+						buttons.get(i - 1).setBounds(x, y, ERRORBUTTONWIDTH,
 								ERRORBUTTONHEIGHT);
-						rootPanel.add(buttons.get(i));
+						rootPanel.add(buttons.get(i - 1));
 					} else {
 						setEmptyPanel(x, y);
 					}

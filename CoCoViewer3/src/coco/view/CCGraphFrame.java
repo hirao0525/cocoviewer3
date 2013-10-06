@@ -1,8 +1,6 @@
 package coco.view;
 
 import java.awt.BasicStroke;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,7 +19,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 import coco.model.CCCompileErrorList;
 
-public class CCGraphFrame extends JFrame implements MouseListener {
+public class CCGraphFrame extends JFrame {
 
 	/**
 	 * 
@@ -29,7 +27,7 @@ public class CCGraphFrame extends JFrame implements MouseListener {
 	private static final long serialVersionUID = 1L;
 
 	public static final String APP_NAME = "CoCo Viewer";
-	public static final String VERSION = "0.0.3";
+	public static final String VERSION = "0.0.4";
 
 	private int width = 680;
 	private int height = 560;
@@ -68,13 +66,12 @@ public class CCGraphFrame extends JFrame implements MouseListener {
 		for (int i = 0; i < list.getErrors().size(); i++) {
 			dataset.addValue(list.getErrors().get(i).getCorrectTime(), "C³ŽžŠÔ",
 					Integer.toString(i + 1));
-			System.out.println(dataset.getValue(0, i));
 		}
 
 		// ƒOƒ‰ƒt‚Ì¶¬
 		JFreeChart chart = ChartFactory.createLineChart(list.getMessage()
-				+ "‚ÌC³ŽžŠÔ", "C³‰ñ”", "C³ŽžŠÔ", dataset, PlotOrientation.VERTICAL,
-				true, true, false);
+				+ "‚ÌC³ŽžŠÔ   ƒŒƒA“x: " + list.getRare(), "C³‰ñ”", "C³ŽžŠÔ", dataset,
+				PlotOrientation.VERTICAL, true, true, false);
 
 		// ”wŒiF‚ÌƒZƒbƒg
 		chart.setBackgroundPaint(ChartColor.WHITE);
@@ -99,7 +96,6 @@ public class CCGraphFrame extends JFrame implements MouseListener {
 		// ƒOƒ‰ƒt‚ðJPanelã‚É”z’u‚·‚é
 		ChartPanel chartpanel = new ChartPanel(chart);
 		chartpanel.setBounds(0, 0, width - 15, height - 50);
-		chartpanel.addMouseListener(this);
 
 		JToolTip tooltip = new JToolTip();
 		chartpanel.setToolTipText(list.getErrors().size() + " : "
@@ -110,30 +106,5 @@ public class CCGraphFrame extends JFrame implements MouseListener {
 		chartpanel.setDisplayToolTips(true);
 		rootPanel.add(chartpanel);
 		add(rootPanel);
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		System.out.println("Can click!");
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-
 	}
 }

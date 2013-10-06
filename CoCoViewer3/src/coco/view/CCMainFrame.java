@@ -21,7 +21,7 @@ public class CCMainFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public static final String APP_NAME = "CoCo Viewer";
-	public static final String VERSION = "0.0.3";
+	public static final String VERSION = "0.0.4";
 
 	// private static final String FILE_NAME = "compileError.log";
 	// private static final String DIR_PATH = "MyProjects/.LookBack/";
@@ -94,20 +94,7 @@ public class CCMainFrame extends JFrame {
 	}
 
 	private void setCompileErrorPanels() {
-		// int max = calcMaxErrorID() + 1;
-		// int cedsSize = ceds.size();
-
-		// int[] errorExistNums = new int[max];
-		// ArrayList<JLabel> jls = new ArrayList<JLabel>();
 		ArrayList<CCErrorElementButton> buttons = new ArrayList<CCErrorElementButton>();
-
-		// 配列初期化
-		// Arrays.fill(errorExistNums, 0);
-
-		// 配列にエラーIDの情報を書き込む
-		// for (int i = 0; i < cedsSize; i++) {
-		// errorExistNums[ceds.get(i).getErrorID()]++;
-		// }
 
 		// エラーIDごとの数値を書き込み、ボタンを実装する
 		for (CCCompileErrorList list : manager.getAllLists()) {
@@ -115,24 +102,12 @@ public class CCMainFrame extends JFrame {
 			buttons.add(button);
 		}
 
-		// for (int i = 0, j = 0; i < max; i++) {
-		// if (errorExistNums[i] > 0) {
-		// jls.add(new JLabel(errorExistNums[i] + " : "
-		// + eids.getMessage(i)));
-		// CCErrorElementButton tmpeeb = new CCErrorElementButton(i, ceds,
-		// eids.getMessage(i));
-		// tmpeeb.add(jls.get(j));
-		// elementButtons.add(tmpeeb);
-		// j++;
-		// }
-		// }
-
 		// ボタンを配置する
 		int i = 0;
 		for (int x = 0; x < width - ERRORBUTTONWIDTH; x += ERRORBUTTONWIDTH) {
 			for (int y = 30; y < height - ERRORBUTTONHEIGHT; y += ERRORBUTTONHEIGHT) {
-				if (i < buttons.size()) {
-					if (manager.getList(i + 1).getErrors().size() > 0) {
+				if (manager.getAllLists().size() > i) {
+					if (manager.getList(i).getErrors().size() > 0) {
 						buttons.get(i).setBounds(x, y, ERRORBUTTONWIDTH,
 								ERRORBUTTONHEIGHT);
 						rootPanel.add(buttons.get(i));
@@ -147,17 +122,6 @@ public class CCMainFrame extends JFrame {
 		}
 	}
 
-	// // コンパイルエラーログのリストから一番大きいコンパイルエラーIDを持ってくる
-	// private int calcMaxErrorID() {
-	// int maxNum = 0;
-	// for (int i = 0; i < ceds.size(); i++) {
-	// if (maxNum < ceds.get(i).getErrorID()) {
-	// maxNum = ceds.get(i).getErrorID();
-	// }
-	// }
-	// return maxNum;
-	// }
-
 	// クリックできないボタンを作成
 	private void setEmptyPanel(int x, int y) {
 		JButton emptyButton = new JButton("未発生");
@@ -167,9 +131,4 @@ public class CCMainFrame extends JFrame {
 		rootPanel.add(emptyButton);
 	}
 
-	// // コンパイルエラーの総合計数を求める
-	// private int sumCompileError() {
-	// // System.out.println(ceds.size());
-	// return ceds.size();
-	// }
 }

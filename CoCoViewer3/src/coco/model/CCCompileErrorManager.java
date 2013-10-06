@@ -1,22 +1,22 @@
 package coco.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class CCCompileErrorManager {
-
-	private HashMap<Integer, CCCompileErrorList> lists = new HashMap<Integer, CCCompileErrorList>();
-	private HashMap<String, Integer> ids = new HashMap<String, Integer>();
+	// HashMap‚Å‚Í‡˜‚ª•ÛØ‚³‚ê‚È‚¢‚Ì‚ÅLinkedHashMap‚É•ÏX
+	private LinkedHashMap<Integer, CCCompileErrorList> lists = new LinkedHashMap<Integer, CCCompileErrorList>();
+	private LinkedHashMap<String, Integer> ids = new LinkedHashMap<String, Integer>();
 	private int totalErrorCount = 0;
 
 	public CCCompileErrorManager() {
 
 	}
 
-	public void put(int id, String message) {
+	public void put(int id, int rare, String message) {
 		CCCompileErrorList list = new CCCompileErrorList();
-		list.setMessage(message);
+		list.setMessageData(rare, message);
 		lists.put(id, list);
 		ids.put(message, id);
 	}
@@ -24,7 +24,7 @@ public class CCCompileErrorManager {
 	public CCCompileErrorList getList(int id) {
 		totalErrorCount++;
 		if (!lists.containsKey(id)) {
-			put(id, "dummy");
+			put(id, 6, "dummy");
 		}
 		return lists.get(id);
 	}
@@ -35,6 +35,10 @@ public class CCCompileErrorManager {
 
 	public List<CCCompileErrorList> getAllLists() {
 		return new ArrayList<CCCompileErrorList>(lists.values());
+	}
+
+	public int getListsLength() {
+		return lists.size();
 	}
 
 	public int getMessagesID(String message) {

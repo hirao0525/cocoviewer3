@@ -4,18 +4,24 @@ import java.util.ArrayList;
 
 public class CCCompileErrorList {
 	private String message = "no name";
+	int rare = 0;
 	private ArrayList<CCCompileError> errors = new ArrayList<CCCompileError>();
 
 	public CCCompileErrorList() {
 
 	}
 
-	public void setMessage(String message) {
+	public void setMessageData(int rare, String message) {
+		this.rare = rare;
 		this.message = message;
 	}
 
 	public String getMessage() {
 		return message;
+	}
+
+	public int getRare() {
+		return rare;
 	}
 
 	public void addError(CCCompileError error) {

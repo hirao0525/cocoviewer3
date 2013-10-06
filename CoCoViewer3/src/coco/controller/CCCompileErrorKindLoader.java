@@ -5,6 +5,7 @@ import coco.model.CCCompileErrorManager;
 public class CCCompileErrorKindLoader extends CCFileLoader {
 
 	private CCCompileErrorManager manager;
+	private int lines = 0;
 
 	public CCCompileErrorKindLoader(CCCompileErrorManager manager) {
 		this.manager = manager;
@@ -18,9 +19,16 @@ public class CCCompileErrorKindLoader extends CCFileLoader {
 	protected void separeteData(String line) {
 		String[] tokenizer = line.split(",");
 		int index = Integer.parseInt(tokenizer[0]);
-		String message = tokenizer[1];
+		int rare = Integer.parseInt(tokenizer[1]);
+		String message = tokenizer[2];
 
-		manager.put(index, message);
+		System.out.println(index + " : " + rare + " : " + message);
+		manager.put(index, rare, message);
+		lines++;
+	}
+
+	public int getLines() {
+		return lines;
 	}
 
 	// protected void separeteData(String line) {

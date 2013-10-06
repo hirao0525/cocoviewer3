@@ -9,13 +9,11 @@ public class CCCompileErrorConverter extends CCFileLoader {
 
 	private CCCompileErrorManager manager;
 	private FileWriter out;
-
-	public CCCompileErrorConverter() {
-
-	}
+	private int addErrorID;
 
 	public CCCompileErrorConverter(CCCompileErrorManager manager) {
 		this.manager = manager;
+		addErrorID = manager.getAllLists().size() + 1;
 	}
 
 	public void convertData(String infile, String outfile) throws IOException {
@@ -30,7 +28,20 @@ public class CCCompileErrorConverter extends CCFileLoader {
 		String[] tokenizer = line.split(",");
 		// TODO: CSVを扱うことが出来るライブラリを用いた形に変更する
 		// errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
-		int errorID = manager.getMessagesID(tokenizer[5]);
+		// TODO: ErrorIDがセットできない場合はどうするのか？
+		int errorID = 0;
+		try {
+			errorID = manager.getMessagesID(tokenizer[5]);
+		} catch (Exception e) {
+			System.out.println("not exist error!");
+			errorID = addErrorID;
+			System.out.println(tokenizer[5]);
+			manager.put(errorID, 6, tokenizer[5]);
+			System.out.println(tokenizer[5] + "  "
+					+ manager.getMessagesID(tokenizer[5]));
+			addErrorID++;
+		}
+
 		String filename = tokenizer[4];
 
 		// TODO: 変換方式を考えること

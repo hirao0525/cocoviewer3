@@ -103,7 +103,7 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 				+ list.getMessage());
 		chartpanel.setDisplayToolTips(true);
 		// デバッグ用
-		System.out.println(chartpanel.getToolTipText());
+		// System.out.println(chartpanel.getToolTipText());
 
 		add(chartpanel);
 	}
@@ -125,7 +125,8 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// debug
-		System.out.println(list.getErrors().size() + " : " + list.getMessage());
+		// System.out.println(list.getErrors().size() + " : " +
+		// list.getMessage());
 	}
 
 	@Override

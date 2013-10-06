@@ -20,7 +20,7 @@ public class CCViewerStart {
 		CCCompileErrorManager manager = new CCCompileErrorManager();
 		CCCompileErrorKindLoader kindloader = new CCCompileErrorKindLoader(
 				manager);
-		kindloader.load("testbase/errorkinds.txt");
+		kindloader.load("testbase/errorkinds.csv");
 
 		CCCompileErrorLoader errorloader = new CCCompileErrorLoader(manager);
 		errorloader.load("testbase/compileError.log");
