@@ -32,28 +32,14 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 	private CCCompileErrorList list;
 
 	public CCErrorElementButton2(CCCompileErrorList list, int width, int height) {
-		// super(list.getErrors().size() + " : " + list.getMessage());
-		// super.setBackground(Color.YELLOW);
 		this.list = list;
 		this.width = width;
 		this.height = height;
 		super.setLayout(null);
 		addMouseListener(this);
-		// initialize(list);
 		makeGraph();
 	}
 
-	// private void initialize(final CCCompileErrorList list) {
-	// // クリック次の動作の決定
-	// this.addActionListener(new ActionListener() {
-	// public void actionPerformed(ActionEvent e) {
-	// CCGraphFrame frame = new CCGraphFrame();
-	// frame.initialize(list);
-	// }
-	// });
-	// }
-
-	// 暫定でShowGraphFrameとほぼ一緒のメソッド
 	private void makeGraph() {
 		// 日本語が文字化けしないテーマ
 		ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
