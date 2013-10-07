@@ -7,11 +7,11 @@ import coco.model.CCCompileErrorManager;
 
 public class CCAddCompileErrorKinds {
 	private CCCompileErrorManager manager;
-	private int lines = 0;
+	private int lines;
 
 	public CCAddCompileErrorKinds(CCCompileErrorManager manager, int lines) {
 		this.manager = manager;
-		this.lines = lines + 1;
+		this.lines = lines;
 	}
 
 	public void addKinds(String filename) throws IOException {

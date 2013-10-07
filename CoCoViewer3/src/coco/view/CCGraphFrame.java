@@ -27,7 +27,7 @@ public class CCGraphFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public static final String APP_NAME = "CoCo Viewer";
-	public static final String VERSION = "0.0.4";
+	public static final String VERSION = "0.0.5";
 
 	private int width = 680;
 	private int height = 560;
@@ -74,7 +74,8 @@ public class CCGraphFrame extends JFrame {
 				PlotOrientation.VERTICAL, true, true, false);
 
 		// 背景色のセット
-		chart.setBackgroundPaint(ChartColor.WHITE);
+		chart.setBackgroundPaint(new CCGraphBackgroundColor().graphColor(list
+				.getRare()));
 
 		// TODO: CategoryPlotを継承してクリック可能にして使える情報を増やすこと
 		CategoryPlot plot = chart.getCategoryPlot();
@@ -95,7 +96,7 @@ public class CCGraphFrame extends JFrame {
 
 		// グラフをJPanel上に配置する
 		ChartPanel chartpanel = new ChartPanel(chart);
-		chartpanel.setBounds(0, 0, width - 15, height - 50);
+		chartpanel.setBounds(0, 0, width - 15, height - 40);
 
 		JToolTip tooltip = new JToolTip();
 		chartpanel.setToolTipText(list.getErrors().size() + " : "

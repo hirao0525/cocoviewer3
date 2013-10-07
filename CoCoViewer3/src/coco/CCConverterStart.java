@@ -19,7 +19,7 @@ public class CCConverterStart {
 		new CCConverterStart().run();
 	}
 
-	private void run() throws IOException {
+	public void run() throws IOException {
 		CCCompileErrorManager manager = new CCCompileErrorManager();
 		CCCompileErrorKindLoader kindloader = new CCCompileErrorKindLoader(
 				manager);

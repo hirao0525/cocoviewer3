@@ -21,7 +21,7 @@ public class CCMainFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public static final String APP_NAME = "CoCo Viewer";
-	public static final String VERSION = "0.0.4";
+	public static final String VERSION = "0.0.3";
 
 	// private static final String FILE_NAME = "compileError.log";
 	// private static final String DIR_PATH = "MyProjects/.LookBack/";

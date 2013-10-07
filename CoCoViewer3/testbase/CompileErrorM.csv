@@ -1,0 +1,10 @@
+StudentName,Lecture,FileName,ErrorMessage,シンボル,シンボルの種類,ワードA,ワードAの種類,ワードB,ワードBの種類,ワードC,ワードCの種類,発生時刻,修正時刻,修正時間,isWorking,複合数,同時修正数,CT(sec),GeneRef
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","Cell",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","MyLinkedListIterator",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","Cell",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","Cell",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","Cell",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","Cell",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","Cell",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","MyLinkedListIterator",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false
+NA,NA,NA,NA,MyLinkedList.java,"シンボルを見つけられません","Cell",クラス,,,,,,,2013/10/07 11:19:57,2013/10/07 15:19:13,0:00:00,false,9,9,0,false

@@ -21,7 +21,7 @@ public class CCMainFrame2 extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public static final String APP_NAME = "CoCo Viewer";
-	public static final String VERSION = "0.0.3";
+	public static final String VERSION = "0.0.5";
 
 	// Button Size
 	private static final int ERRORBUTTONWIDTH = 100;
@@ -92,7 +92,7 @@ public class CCMainFrame2 extends JFrame {
 		int i = 1;
 		for (int x = 0; x < width - ERRORBUTTONWIDTH; x += ERRORBUTTONWIDTH) {
 			for (int y = 30; y < height - ERRORBUTTONHEIGHT; y += ERRORBUTTONHEIGHT) {
-				if (manager.getListsLength() > i) {
+				if (manager.getListsLength() >= i) {
 					if (manager.getList(i).getErrors().size() > 0) {
 						buttons.get(i - 1).setBounds(x, y, ERRORBUTTONWIDTH,
 								ERRORBUTTONHEIGHT);

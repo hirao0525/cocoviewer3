@@ -7,11 +7,6 @@ import coco.view.CCMainFrame2;
 
 public class CCViewerStart {
 
-	/**
-	 * Viewer Main
-	 * 
-	 */
-
 	public static void main(String[] args) {
 		new CCViewerStart().run();
 	}
@@ -20,10 +15,10 @@ public class CCViewerStart {
 		CCCompileErrorManager manager = new CCCompileErrorManager();
 		CCCompileErrorKindLoader kindloader = new CCCompileErrorKindLoader(
 				manager);
-		kindloader.load("testbase/errorkinds.csv");
+		kindloader.load("testbase/errorkindsM.csv");
 
 		CCCompileErrorLoader errorloader = new CCCompileErrorLoader(manager);
-		errorloader.load("testbase/compileError.log");
+		errorloader.load("testbase/compileErrorM.log");
 
 		CCMainFrame2 frame = new CCMainFrame2(manager);
 		frame.setVisible(true);
