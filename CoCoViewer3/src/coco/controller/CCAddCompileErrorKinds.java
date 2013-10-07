@@ -16,7 +16,7 @@ public class CCAddCompileErrorKinds {
 
 	public void addKinds(String filename) throws IOException {
 		FileWriter writer = new FileWriter(filename, true);
-		while (manager.getListsLength() >= lines) {
+		while (manager.getAllLists().size() >= lines) {
 			String errorID = Integer.toString(lines);
 			String message = manager.getList(lines).getMessage();
 

@@ -92,7 +92,7 @@ public class CCMainFrame2 extends JFrame {
 		int i = 1;
 		for (int x = 0; x < width - ERRORBUTTONWIDTH; x += ERRORBUTTONWIDTH) {
 			for (int y = 30; y < height - ERRORBUTTONHEIGHT; y += ERRORBUTTONHEIGHT) {
-				if (manager.getListsLength() >= i) {
+				if (manager.getAllLists().size() >= i) {
 					if (manager.getList(i).getErrors().size() > 0) {
 						buttons.get(i - 1).setBounds(x, y, ERRORBUTTONWIDTH,
 								ERRORBUTTONHEIGHT);

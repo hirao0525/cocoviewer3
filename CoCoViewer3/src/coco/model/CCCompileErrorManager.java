@@ -37,10 +37,6 @@ public class CCCompileErrorManager {
 		return new ArrayList<CCCompileErrorList>(lists.values());
 	}
 
-	public int getListsLength() {
-		return lists.size();
-	}
-
 	public int getMessagesID(String message) {
 		return ids.get(message);
 	}

@@ -15,10 +15,10 @@ public class CCViewerStart {
 		CCCompileErrorManager manager = new CCCompileErrorManager();
 		CCCompileErrorKindLoader kindloader = new CCCompileErrorKindLoader(
 				manager);
-		kindloader.load("testbase/errorkindsM.csv");
+		kindloader.load("testbase/errorkinds.csv");
 
 		CCCompileErrorLoader errorloader = new CCCompileErrorLoader(manager);
-		errorloader.load("testbase/compileErrorM.log");
+		errorloader.load("testbase/compileError.log");
 
 		CCMainFrame2 frame = new CCMainFrame2(manager);
 		frame.setVisible(true);

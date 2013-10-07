@@ -28,12 +28,11 @@ public class CCCompileErrorConverter extends CCFileLoader {
 		String[] tokenizer = line.split(",");
 		// TODO: CSVを扱うことが出来るライブラリを用いた形に変更する
 		// errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
-		// TODO: ErrorIDがセットできない場合はどうするのか？
+		// 存在していないerrorIDの場合、新しくエラーメッセージを記録する
 		int errorID = 0;
 		try {
 			errorID = manager.getMessagesID(tokenizer[5]);
 		} catch (Exception e) {
-			System.out.println("not exist error!");
 			errorID = addErrorID;
 			System.out.println(tokenizer[5]);
 			manager.put(errorID, 6, tokenizer[5]);
