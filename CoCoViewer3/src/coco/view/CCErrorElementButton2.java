@@ -22,8 +22,9 @@ import coco.model.CCCompileErrorList;
 public class CCErrorElementButton2 extends JButton implements MouseListener {
 
 	/**
-	 * minigraph‚ğ•\¦‚·‚é
+	 * minigraph‚ğ•\¦‚·‚é chartPanel‚ªActionListener‚É‘Î‰‚µ‚Ä‚¢‚È‚¢‚Ì‚ÅAMouseListener‚ÅÀ‘•
 	 */
+
 	private static final long serialVersionUID = 1L;
 
 	private int width;
@@ -36,7 +37,6 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 		this.width = width;
 		this.height = height;
 		super.setLayout(null);
-		addMouseListener(this);
 		makeGraph();
 	}
 
@@ -97,8 +97,9 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		CCGraphFrame frame = new CCGraphFrame();
-		frame.initialize(list);
+		CCGraphFrame frame = new CCGraphFrame(list);
+		frame.openGraph();
+		frame.setVisible(true);
 	}
 
 	@Override

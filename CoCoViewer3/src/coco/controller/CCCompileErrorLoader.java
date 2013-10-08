@@ -20,15 +20,12 @@ public class CCCompileErrorLoader extends CCFileLoader {
 		CCCompileError error = new CCCompileError();
 
 		// 見づらいため、直接引数に渡す→一次変数に一旦格納してから引数を渡す、に変更
-		// データ形式もこの順番に変更
 		String[] tokenizer = line.split(",");
 		int errorID = Integer.parseInt(tokenizer[0]);
 		String filename = tokenizer[1];
 		long beginTime = Long.parseLong(tokenizer[2]);
 		int correctTime = Integer.parseInt(tokenizer[3]);
 
-		// System.out.println(beginTime + " " + filename + " " + errorID + " "
-		// + correctTime);
 		error.setData(errorID, filename, beginTime, correctTime);
 		manager.getList(errorID).addError(error);
 	}

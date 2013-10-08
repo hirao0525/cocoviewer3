@@ -46,10 +46,6 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 
 		String filename = lines.get(4);
 
-		// TODO: •ÏŠ·•û®‚ğl‚¦‚é‚±‚Æ
-
-		// 2010/06/30 18:59:04 Œ`®‚ğ int Œ^‚É
-		// TODO: Œã‚Å
 		long beginTime = calculationBeginTime(lines.get(14));
 		// long beginTime = 0;
 
@@ -57,8 +53,8 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		int correctTime = calculationCorrectTime(lines.get(16));
 
 		// debug
-		System.out.println(errorID + "," + filename + "," + beginTime + ","
-				+ correctTime);
+		// System.out.println(errorID + "," + filename + "," + beginTime + ","
+		// + correctTime);
 
 		out.write(errorID + "," + filename + "," + beginTime + ","
 				+ correctTime + "\n");

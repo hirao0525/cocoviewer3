@@ -27,6 +27,7 @@ public class CCCompileErrorKindLoader extends CCCsvFileLoader {
 		linesNumber++;
 	}
 
+	// Å‰‚Ìó‘Ô‚Å’Ç‰Á‚µ‚½ƒGƒ‰[‚Ì”‚ğ•Û‘¶‚µ‚Ä‚¨‚­
 	public int getLines() {
 		return linesNumber;
 	}

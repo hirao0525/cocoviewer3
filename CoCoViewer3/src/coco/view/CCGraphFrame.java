@@ -36,23 +36,17 @@ public class CCGraphFrame extends JFrame {
 	private CCCompileErrorList list;
 
 	// default
-	public CCGraphFrame() {
-
-	}
-
-	public void initialize(CCCompileErrorList list) {
+	public CCGraphFrame(CCCompileErrorList list) {
 		this.list = list;
-		// rootPanel のレイアウトをリセットする
-		rootPanel.setLayout(null);
-
-		setTitleData();
-
-		makeGraph();
-
-		setVisible(true);
+		initialize();
 	}
 
-	private void setTitleData() {
+	public void openGraph() {
+		makeGraph();
+	}
+
+	private void initialize() {
+		rootPanel.setLayout(null);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setSize(width, height);
 		setTitle(APP_NAME + " " + VERSION + " - " + list.getMessage() + " の詳細");

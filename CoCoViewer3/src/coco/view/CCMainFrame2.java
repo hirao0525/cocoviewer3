@@ -29,7 +29,7 @@ public class CCMainFrame2 extends JFrame {
 
 	// Dialog size
 	private int width = 1120;
-	private int height = 720;
+	private int height = 740;
 
 	// Compile Error Date
 	private CCCompileErrorManager manager;
@@ -70,12 +70,15 @@ public class CCMainFrame2 extends JFrame {
 	private void setCompileErrorNumber() {
 		JLabel label = new JLabel();
 		String string = "あなたのこれまでの総コンパイルエラー数 ： " + manager.getTotalErrorCount();
-		label.setBounds(10, 10, 300, 15);
 		label.setText(string);
+		CCAchivementButton achivementButton = new CCAchivementButton(manager,
+				label);
+		achivementButton.setBounds(10, 5, 350, 25);
+
 		// label の背景を設定する場合は背景を不透明にする処理を加えること
 		// label.setBackground(Color.yellow);
 		// label.setOpaque(true);
-		rootPanel.add(label);
+		rootPanel.add(achivementButton);
 	}
 
 	private void setMiniGraphButton() {
@@ -91,7 +94,7 @@ public class CCMainFrame2 extends JFrame {
 		// ボタンを配置する
 		int i = 1;
 		for (int x = 0; x < width - ERRORBUTTONWIDTH; x += ERRORBUTTONWIDTH) {
-			for (int y = 30; y < height - ERRORBUTTONHEIGHT; y += ERRORBUTTONHEIGHT) {
+			for (int y = 40; y < height - ERRORBUTTONHEIGHT; y += ERRORBUTTONHEIGHT) {
 				if (manager.getAllLists().size() >= i) {
 					if (manager.getList(i).getErrors().size() > 0) {
 						buttons.get(i - 1).setBounds(x, y, ERRORBUTTONWIDTH,
