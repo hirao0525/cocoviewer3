@@ -1,11 +1,13 @@
 package coco.controller;
 
+import java.util.List;
+
 import coco.model.CCCompileErrorManager;
 
-public class CCCompileErrorKindLoader extends CCFileLoader {
+public class CCCompileErrorKindLoader extends CCCsvFileLoader {
 
 	private CCCompileErrorManager manager;
-	private int lines = 1;
+	private int linesNumber = 1;
 
 	public CCCompileErrorKindLoader(CCCompileErrorManager manager) {
 		this.manager = manager;
@@ -16,18 +18,17 @@ public class CCCompileErrorKindLoader extends CCFileLoader {
 	}
 
 	@Override
-	protected void separeteData(String line) {
-		String[] tokenizer = line.split(",");
-		int index = Integer.parseInt(tokenizer[0]);
-		int rare = Integer.parseInt(tokenizer[1]);
-		String message = tokenizer[2];
+	protected void separeteData(List<String> lines) {
+		int index = Integer.parseInt(lines.get(0));
+		int rare = Integer.parseInt(lines.get(1));
+		String message = lines.get(2);
 
 		manager.put(index, rare, message);
-		lines++;
+		linesNumber++;
 	}
 
 	public int getLines() {
-		return lines;
+		return linesNumber;
 	}
 
 	// protected void separeteData(String line) {

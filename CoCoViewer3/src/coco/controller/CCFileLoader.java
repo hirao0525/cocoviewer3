@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 abstract class CCFileLoader {
 	/***************************
-	 * åpè≥:CompileErrorLoader, KindLoader
+	 * åpè≥:CCAddCompileErrorKinds, CCompileErrorLoader
 	 ***************************/
 
 	protected void loadData(String filename) {

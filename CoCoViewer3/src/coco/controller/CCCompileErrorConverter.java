@@ -2,10 +2,11 @@ package coco.controller;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
 import coco.model.CCCompileErrorManager;
 
-public class CCCompileErrorConverter extends CCFileLoader {
+public class CCCompileErrorConverter extends CCCsvFileLoader {
 
 	private CCCompileErrorManager manager;
 	private FileWriter out;
@@ -23,25 +24,24 @@ public class CCCompileErrorConverter extends CCFileLoader {
 		out.close();
 	}
 
-	protected void separeteData(String line) throws IOException {
-
-		String[] tokenizer = line.split(",");
+	protected void separeteData(List<String> lines) throws IOException {
 		// TODO: CSVを扱うことが出来るライブラリを用いた形に変更する
 		// errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
 		// 存在していないerrorIDの場合、新しくエラーメッセージを記録する
+
 		int errorID = 0;
 		try {
-			errorID = manager.getMessagesID(tokenizer[5]);
+			errorID = manager.getMessagesID(lines.get(5));
 		} catch (Exception e) {
 			errorID = addErrorID;
-			System.out.println(tokenizer[5]);
-			manager.put(errorID, 6, tokenizer[5]);
-			System.out.println(tokenizer[5] + "  "
-					+ manager.getMessagesID(tokenizer[5]));
+			System.out.println(lines.get(5));
+			manager.put(errorID, 6, lines.get(5));
+			System.out.println(lines.get(5) + "  "
+					+ manager.getMessagesID(lines.get(5)));
 			addErrorID++;
 		}
 
-		String filename = tokenizer[4];
+		String filename = lines.get(4);
 
 		// TODO: 変換方式を考えること
 		// play(java.util.ArrayList<java.lang.String>,java.util.ArrayList<java.lang.Integer>)
@@ -54,7 +54,7 @@ public class CCCompileErrorConverter extends CCFileLoader {
 		// 8]);
 		int beginTime = 0;
 		// 修正時間は取り出して時間を計算することに成功した
-		int correctTime = calculationCorrectTime(tokenizer[tokenizer.length - 6]);
+		int correctTime = calculationCorrectTime(lines.get(16));
 
 		// debug
 		System.out.println(errorID + "," + filename + "," + beginTime + ","
