@@ -4,14 +4,14 @@ public class CCCompileError {
 
 	private int errorID;
 	private String filename;
-	private int beginTime;
+	private long beginTime;
 	private int correctTime;
 
 	public CCCompileError() {
 
 	}
 
-	public void setData(int errorID, String filename, int beginTime,
+	public void setData(int errorID, String filename, long beginTime,
 			int correctTime) {
 		this.errorID = errorID;
 		this.filename = filename;
@@ -19,7 +19,7 @@ public class CCCompileError {
 		this.correctTime = correctTime;
 	}
 
-	public int getBeginTime() {
+	public long getBeginTime() {
 		return beginTime;
 	}
 
@@ -31,7 +31,7 @@ public class CCCompileError {
 		return errorID;
 	}
 
-	public int getCorrectTime() {
+	public long getCorrectTime() {
 		return correctTime;
 	}
 }

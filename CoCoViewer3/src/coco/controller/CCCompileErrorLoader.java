@@ -24,7 +24,7 @@ public class CCCompileErrorLoader extends CCFileLoader {
 		String[] tokenizer = line.split(",");
 		int errorID = Integer.parseInt(tokenizer[0]);
 		String filename = tokenizer[1];
-		int beginTime = Integer.parseInt(tokenizer[2]);
+		long beginTime = Long.parseLong(tokenizer[2]);
 		int correctTime = Integer.parseInt(tokenizer[3]);
 
 		// System.out.println(beginTime + " " + filename + " " + errorID + " "
