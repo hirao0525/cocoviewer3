@@ -1,6 +1,8 @@
 package coco.view;
 
 import java.awt.BasicStroke;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,6 +12,7 @@ import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
@@ -34,6 +37,9 @@ public class CCGraphFrame extends JFrame {
 	// default
 	public CCGraphFrame(CCCompileErrorList list) {
 		this.list = list;
+		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+		width = (int) (d.width * 0.75);
+		height = (int) (d.height * 0.75);
 		initialize();
 	}
 
@@ -51,7 +57,7 @@ public class CCGraphFrame extends JFrame {
 
 	private void makeGraph() {
 		// 日本語が文字化けしないテーマ
-		// ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
+		ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
 		// グラフデータを設定する
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 		for (int i = 0; i < list.getErrors().size(); i++) {

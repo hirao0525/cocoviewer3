@@ -36,7 +36,6 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		}
 
 		String message = lines.get(5) + element;
-		manager.totalErrorCountUp();
 
 		try {
 			errorID = manager.getMessagesID(message);
@@ -58,6 +57,8 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		// System.out.println(errorID + "," + filename + "," + beginTime + ","
 		// + correctTime);
 
+		// ここでエラー発生数を数えるメリットはあるか？
+		// manager.totalErrorCountUp();
 		out.write(errorID + "," + filename + "," + beginTime + ","
 				+ correctTime + "\n");
 	}

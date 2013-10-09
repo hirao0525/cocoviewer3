@@ -28,5 +28,6 @@ public class CCCompileErrorLoader extends CCFileLoader {
 
 		error.setData(errorID, filename, beginTime, correctTime);
 		manager.getList(errorID).addError(error);
+		manager.totalErrorCountUp();
 	}
 }

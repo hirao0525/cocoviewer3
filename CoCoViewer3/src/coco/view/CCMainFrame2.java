@@ -2,7 +2,8 @@ package coco.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.GraphicsEnvironment;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -39,8 +40,11 @@ public class CCMainFrame2 extends JFrame {
 
 	public CCMainFrame2(CCCompileErrorManager manager) {
 		this.manager = manager;
-		this.height = GraphicsEnvironment.getLocalGraphicsEnvironment()
-				.getMaximumWindowBounds().height - 25;
+		// this.height = GraphicsEnvironment.getLocalGraphicsEnvironment()
+		// .getMaximumWindowBounds().height - 25;
+		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+		width = d.width - ERRORBUTTONWIDTH * 2;
+		height = d.height;
 		initialize();
 	}
 
