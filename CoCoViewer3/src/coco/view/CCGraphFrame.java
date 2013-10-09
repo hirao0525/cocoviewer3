@@ -10,7 +10,6 @@ import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
@@ -25,9 +24,6 @@ public class CCGraphFrame extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	public static final String APP_NAME = "CoCo Viewer";
-	public static final String VERSION = "0.0.5";
 
 	private int width = 680;
 	private int height = 560;
@@ -49,12 +45,13 @@ public class CCGraphFrame extends JFrame {
 		rootPanel.setLayout(null);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setSize(width, height);
-		setTitle(APP_NAME + " " + VERSION + " - " + list.getMessage() + " の詳細");
+		setTitle(CCMainFrame2.APP_NAME + " " + CCMainFrame2.VERSION + " - "
+				+ list.getMessage() + " の詳細");
 	}
 
 	private void makeGraph() {
 		// 日本語が文字化けしないテーマ
-		ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
+		// ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
 		// グラフデータを設定する
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 		for (int i = 0; i < list.getErrors().size(); i++) {

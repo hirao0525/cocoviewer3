@@ -34,7 +34,9 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		if (lines.get(7) != null) {
 			element = "Åi" + lines.get(7) + "Åj";
 		}
+
 		String message = lines.get(5) + element;
+		manager.totalErrorCountUp();
 
 		try {
 			errorID = manager.getMessagesID(message);

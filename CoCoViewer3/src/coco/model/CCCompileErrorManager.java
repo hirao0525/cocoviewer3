@@ -22,11 +22,14 @@ public class CCCompileErrorManager {
 	}
 
 	public CCCompileErrorList getList(int id) {
-		totalErrorCount++;
 		if (!lists.containsKey(id)) {
 			put(id, 6, "dummy");
 		}
 		return lists.get(id);
+	}
+
+	public void totalErrorCountUp() {
+		totalErrorCount++;
 	}
 
 	public int getTotalErrorCount() {
