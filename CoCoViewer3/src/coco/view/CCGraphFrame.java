@@ -12,7 +12,6 @@ import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
@@ -57,7 +56,7 @@ public class CCGraphFrame extends JFrame {
 
 	private void makeGraph() {
 		// 日本語が文字化けしないテーマ
-		ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
+		// ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
 		// グラフデータを設定する
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 		for (int i = 0; i < list.getErrors().size(); i++) {
@@ -95,13 +94,13 @@ public class CCGraphFrame extends JFrame {
 		ChartPanel chartpanel = new ChartPanel(chart);
 		chartpanel.setBounds(0, 0, width - 15, height - 40);
 
+		// TODO: TIPS表示されない
 		JToolTip tooltip = new JToolTip();
 		chartpanel.setToolTipText(list.getErrors().size() + " : "
 				+ list.getMessage());
 		tooltip.setComponent(chartpanel);
 		chartpanel.setDisplayToolTips(true);
 
-		chartpanel.setDisplayToolTips(true);
 		rootPanel.add(chartpanel);
 		add(rootPanel);
 	}

@@ -10,7 +10,6 @@ import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
@@ -42,7 +41,7 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 
 	private void makeGraph() {
 		// 日本語が文字化けしないテーマ
-		ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
+		// ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
 		// グラフデータを設定する
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 		for (int i = 0; i < list.getErrors().size(); i++) {
@@ -112,9 +111,6 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// debug
-		// System.out.println(list.getErrors().size() + " : " +
-		// list.getMessage());
 	}
 
 	@Override
