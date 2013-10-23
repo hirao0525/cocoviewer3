@@ -23,15 +23,14 @@ public class CCConverterStart {
 		CCCompileErrorManager manager = new CCCompileErrorManager();
 		CCCompileErrorKindLoader kindloader = new CCCompileErrorKindLoader(
 				manager);
-		kindloader.load("testbase/ErrorKinds.csv");
+		kindloader.load("ErrorKinds.csv");
 
 		CCCompileErrorConverter errorconverter = new CCCompileErrorConverter(
 				manager);
-		errorconverter.convertData("testbase/CompileError.csv",
-				"testbase/CompileErrorLog.csv");
+		errorconverter.convertData("CompileError.csv", "CompileErrorLog.csv");
 
 		CCAddCompileErrorKinds addcompileerrorkinds = new CCAddCompileErrorKinds(
 				manager, kindloader.getLines());
-		addcompileerrorkinds.addKinds("testbase/ErrorKinds.csv");
+		addcompileerrorkinds.addKinds("ErrorKinds.csv");
 	}
 }
