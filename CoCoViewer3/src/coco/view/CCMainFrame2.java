@@ -44,7 +44,7 @@ public class CCMainFrame2 extends JFrame {
 		// .getMaximumWindowBounds().height - 25;
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		width = d.width - ERRORBUTTONWIDTH * 2;
-		height = d.height;
+		height = d.height - ERRORBUTTONHEIGHT * 2;
 		initialize();
 	}
 
@@ -63,6 +63,13 @@ public class CCMainFrame2 extends JFrame {
 
 		// レイアウトした配置でコンテンツを追加
 		getContentPane().add(rootPanel, BorderLayout.CENTER);
+
+		// TODO: Windowサイズ変更に対応できるようにすること
+		// this.addWindowListener(new WindowAdapter() {
+		// public void windowStateChanged(WindowEvent e) {
+		//
+		// }
+		// });
 	}
 
 	private void frameSetting() {
@@ -98,7 +105,7 @@ public class CCMainFrame2 extends JFrame {
 		// ボタンを配置する
 		int i = 1;
 		for (int x = 0; x < width - ERRORBUTTONWIDTH; x += ERRORBUTTONWIDTH) {
-			for (int y = 40; y < height - ERRORBUTTONHEIGHT; y += ERRORBUTTONHEIGHT) {
+			for (int y = 40; y < height - ERRORBUTTONHEIGHT * 2; y += ERRORBUTTONHEIGHT) {
 				if (manager.getAllLists().size() >= i) {
 					if (manager.getList(i).getErrors().size() > 0) {
 						buttons.get(i - 1).setBounds(x, y, ERRORBUTTONWIDTH,
