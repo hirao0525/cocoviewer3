@@ -1,7 +1,11 @@
 package coco.controller;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import coco.model.CCCompileErrorManager;
 
@@ -14,8 +18,10 @@ public class CCAddCompileErrorKinds {
 		this.lines = lines;
 	}
 
-	public void addKinds(String filename) throws IOException {
-		FileWriter writer = new FileWriter(filename, true);
+	public void addKinds(String inFileName, String outFileName)
+			throws IOException {
+		copyFile(inFileName, outFileName);
+		FileWriter writer = new FileWriter(outFileName, true);
 		while (manager.getAllLists().size() >= lines) {
 			String errorID = Integer.toString(lines);
 			String message = manager.getList(lines).getMessage();
@@ -25,5 +31,29 @@ public class CCAddCompileErrorKinds {
 		}
 
 		writer.close();
+	}
+
+	private void copyFile(String inFileName, String outFileName) {
+		deleteOutFile(outFileName);
+		try {
+			BufferedReader breader = new BufferedReader(new InputStreamReader(
+					new FileInputStream(inFileName), "SJIS"));
+			FileWriter writer = new FileWriter(outFileName, true);
+			String line = breader.readLine(); // àÍçsñ⁄ì«Ç›îÚÇŒÇµ
+			while ((line = breader.readLine()) != null) {
+				writer.write(line + "\n");
+			}
+			breader.close();
+			writer.close();
+		} catch (IOException e) {
+			System.out.println(e);
+		}
+	}
+
+	private void deleteOutFile(String outFileName) {
+		File outFile = new File(outFileName);
+		if (outFile.exists()) {
+			outFile.delete();
+		}
 	}
 }

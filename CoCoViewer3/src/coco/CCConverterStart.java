@@ -31,6 +31,6 @@ public class CCConverterStart {
 
 		CCAddCompileErrorKinds addcompileerrorkinds = new CCAddCompileErrorKinds(
 				manager, kindloader.getLines());
-		addcompileerrorkinds.addKinds("ErrorKinds.csv");
+		addcompileerrorkinds.addKinds("ErrorKinds.csv", "MyErrorKinds.csv");
 	}
 }

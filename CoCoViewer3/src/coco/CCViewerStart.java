@@ -15,7 +15,7 @@ public class CCViewerStart {
 		CCCompileErrorManager manager = new CCCompileErrorManager();
 		CCCompileErrorKindLoader kindloader = new CCCompileErrorKindLoader(
 				manager);
-		kindloader.load("ErrorKinds.csv");
+		kindloader.load("MyErrorKinds.csv");
 
 		CCCompileErrorLoader errorloader = new CCCompileErrorLoader(manager);
 		errorloader.load("CompileErrorLog.csv");
