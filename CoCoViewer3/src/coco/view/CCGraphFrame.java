@@ -2,6 +2,7 @@ package coco.view;
 
 import java.awt.BasicStroke;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Toolkit;
 
 import javax.swing.JFrame;
@@ -68,6 +69,8 @@ public class CCGraphFrame extends JFrame {
 		JFreeChart chart = ChartFactory.createLineChart(list.getMessage()
 				+ "の修正時間   レア度: " + list.getRare(), "修正回数", "修正時間", dataset,
 				PlotOrientation.VERTICAL, true, true, false);
+		// フォント指定しないと文字化けする
+		chart.getTitle().setFont(new Font("Font2DHandle", Font.PLAIN, 20));
 
 		// 背景色のセット
 		chart.setBackgroundPaint(new CCGraphBackgroundColor().graphColor(list

@@ -1,6 +1,7 @@
 package coco.view;
 
 import java.awt.BasicStroke;
+import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -40,8 +41,9 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 	}
 
 	private void makeGraph() {
-		// 日本語が文字化けしないテーマ
+		// 日本語が文字化けしないテーマ(フォント指定で避けたので使わない)
 		// ChartFactory.setChartTheme(StandardChartTheme.createLegacyTheme());
+
 		// グラフデータを設定する
 		DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 		for (int i = 0; i < list.getErrors().size(); i++) {
@@ -58,6 +60,8 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 
 		JFreeChart chart = ChartFactory.createLineChart(message, "修正回数",
 				"修正時間", dataset, PlotOrientation.VERTICAL, false, false, false);
+		// フォント指定しないと文字化けする
+		chart.getTitle().setFont(new Font("Font2DHandle", Font.PLAIN, 20));
 
 		// 背景色のセット
 		chart.setBackgroundPaint(new CCGraphBackgroundColor().graphColor(list
