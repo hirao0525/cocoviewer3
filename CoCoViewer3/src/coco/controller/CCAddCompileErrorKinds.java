@@ -39,7 +39,7 @@ public class CCAddCompileErrorKinds {
 			BufferedReader breader = new BufferedReader(new InputStreamReader(
 					new FileInputStream(inFileName), "SJIS"));
 			FileWriter writer = new FileWriter(outFileName, true);
-			String line = breader.readLine(); // ˆês–Ú“Ç‚İ”ò‚Î‚µ
+			String line;
 			while ((line = breader.readLine()) != null) {
 				writer.write(line + "\n");
 			}

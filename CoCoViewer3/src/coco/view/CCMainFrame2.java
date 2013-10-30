@@ -2,8 +2,6 @@ package coco.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -42,9 +40,9 @@ public class CCMainFrame2 extends JFrame {
 		this.manager = manager;
 		// this.height = GraphicsEnvironment.getLocalGraphicsEnvironment()
 		// .getMaximumWindowBounds().height - 25;
-		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-		width = d.width - ERRORBUTTONWIDTH * 2;
-		height = d.height - ERRORBUTTONHEIGHT * 2;
+		// Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+		// width = d.width - ERRORBUTTONWIDTH * 2;
+		// height = d.height - ERRORBUTTONHEIGHT * 2;
 		initialize();
 	}
 
@@ -82,14 +80,16 @@ public class CCMainFrame2 extends JFrame {
 		JLabel label = new JLabel();
 		String string = "あなたのこれまでの総コンパイルエラー数 ： " + manager.getTotalErrorCount();
 		label.setText(string);
-		CCAchivementButton achivementButton = new CCAchivementButton(manager,
-				label);
-		achivementButton.setBounds(10, 5, 350, 25);
+		// CCAchivementButton achivementButton = new CCAchivementButton(manager,
+		// label);
+		// achivementButton.setBounds(10, 5, 350, 25);
+		label.setBounds(10, 5, 350, 25);
 
 		// label の背景を設定する場合は背景を不透明にする処理を加えること
 		// label.setBackground(Color.yellow);
 		// label.setOpaque(true);
-		rootPanel.add(achivementButton);
+		rootPanel.add(label);
+		// rootPanel.add(achivementButton);
 	}
 
 	private void setMiniGraphButton() {
