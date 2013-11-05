@@ -71,6 +71,7 @@ public class CCGraphFrame extends JFrame {
 				PlotOrientation.VERTICAL, true, true, false);
 		// フォント指定しないと文字化けする
 		chart.getTitle().setFont(new Font("Font2DHandle", Font.PLAIN, 20));
+		chart.getLegend().setItemFont(new Font("Font2DHandle", Font.PLAIN, 16));
 
 		// 背景色のセット
 		chart.setBackgroundPaint(new CCGraphBackgroundColor().graphColor(list

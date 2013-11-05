@@ -62,6 +62,8 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 				"修正時間", dataset, PlotOrientation.VERTICAL, false, false, false);
 		// フォント指定しないと文字化けする
 		chart.getTitle().setFont(new Font("Font2DHandle", Font.PLAIN, 20));
+		// chart.getLegend().setItemFont(new Font("Font2DHandle", Font.PLAIN,
+		// 8));
 
 		// 背景色のセット
 		chart.setBackgroundPaint(new CCGraphBackgroundColor().graphColor(list
