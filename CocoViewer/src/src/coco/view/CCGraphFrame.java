@@ -1,12 +1,16 @@
 package src.coco.view;
 
 import java.awt.BasicStroke;
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
+import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JToolTip;
 
 import org.jfree.chart.ChartColor;
@@ -46,10 +50,14 @@ public class CCGraphFrame extends JFrame {
 
 	public void openGraph() {
 		makeGraph();
+		makeSourceList();
+		add(rootPanel);
+		getContentPane().add(rootPanel, BorderLayout.CENTER);
+		pack();
 	}
 
 	private void initialize() {
-		rootPanel.setLayout(null);
+		// rootPanel.setLayout(null);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setSize(width, height);
 		setTitle(CCMainFrame2.APP_NAME + " " + CCMainFrame2.VERSION + " - "
@@ -102,7 +110,7 @@ public class CCGraphFrame extends JFrame {
 
 		// グラフをJPanel上に配置する
 		ChartPanel chartpanel = new ChartPanel(chart);
-		chartpanel.setBounds(0, 0, width - 15, height - 40);
+		// chartpanel.setBounds(0, 0, width - 15, height - 40);
 
 		// TODO: TIPS表示されない
 		JToolTip tooltip = new JToolTip();
@@ -111,7 +119,20 @@ public class CCGraphFrame extends JFrame {
 		tooltip.setComponent(chartpanel);
 		chartpanel.setDisplayToolTips(true);
 
-		rootPanel.add(chartpanel);
-		add(rootPanel);
+		rootPanel.add(chartpanel, BorderLayout.WEST);
+		// rootPanel.add(chartpanel);
+	}
+
+	// TODO リスト部分の実装
+	private void makeSourceList() {
+		DefaultListModel model = new DefaultListModel();
+		for (int i = 0; i < list.getErrors().size(); i++) {
+			model.addElement((i + 1) + "回目");
+		}
+		JList jlist = new JList(model);
+		JScrollPane scrollPanel = new JScrollPane();
+		scrollPanel.getViewport().setView(jlist);
+
+		rootPanel.add(scrollPanel, BorderLayout.EAST);
 	}
 }

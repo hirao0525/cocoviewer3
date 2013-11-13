@@ -61,7 +61,6 @@ public class CCMainFrame2 extends JFrame {
 
 		// レイアウトした配置でコンテンツを追加
 		getContentPane().add(rootPanel, BorderLayout.CENTER);
-
 		// TODO: Windowサイズ変更に対応できるようにすること
 		// this.addWindowListener(new WindowAdapter() {
 		// public void windowStateChanged(WindowEvent e) {

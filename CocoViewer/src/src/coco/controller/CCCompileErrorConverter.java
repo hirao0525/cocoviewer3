@@ -71,6 +71,7 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		// addErrorID++;
 		// }
 		//
+		// String projectname = "";
 		// String filename = lines.get(4);
 		//
 		// // 開始時刻はファイルのフルパスから持ってくる
@@ -79,11 +80,6 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		//
 		// // 修正時間は取り出して時間を計算することに成功した
 		// int correctTime = calculationCorrectTime(lines.get(16));
-		//
-		// // debug
-		// // System.out.println(errorID + "," + filename + "," + beginTime +
-		// ","
-		// // + correctTime);
 
 		// errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
 		// 存在していないerrorIDの場合、新しくエラーメッセージを記録する
@@ -106,15 +102,22 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 
 		// spiltは直接\\で区切ることができないので，いったん/に変換する
 		// 理由については後日調査すること
+		String projectname = "";
+		String filename;
+		long beginTime = 0;
+
 		String filepath = lines.get(2).replace("\\", "/");
 		String[] filepathSegments = filepath.split("/");
-		String projectname = filepathSegments[filepathSegments.length - 4];
-		String filename = filepathSegments[filepathSegments.length - 1];
-		// String filename = lines.get(2);
+		if (filepathSegments.length > 4) {
+			projectname = filepathSegments[filepathSegments.length - 4];
+			filename = filepathSegments[filepathSegments.length - 1];
+			// 開始時刻はファイルのフルパスから持ってくる
+			beginTime = Long
+					.parseLong(filepathSegments[filepathSegments.length - 3]);
+		} else {
+			filename = lines.get(2);
+		}
 
-		// 開始時刻はファイルのフルパスから持ってくる
-		long beginTime = Long
-				.parseLong(filepathSegments[filepathSegments.length - 3]);
 		// long beginTime = calculationBeginTime(lines.get(14));
 		// long beginTime = 0;
 

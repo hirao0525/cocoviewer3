@@ -2,13 +2,13 @@ package src.coco.view;
 
 import java.awt.BasicStroke;
 import java.awt.Font;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 
 import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartMouseEvent;
+import org.jfree.chart.ChartMouseListener;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.CategoryAxis;
@@ -20,7 +20,8 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 import src.coco.model.CCCompileErrorList;
 
-public class CCErrorElementButton2 extends JButton implements MouseListener {
+public class CCErrorElementButton2 extends JButton implements
+		ChartMouseListener {
 
 	/**
 	 * minigraph‚ğ•\¦‚·‚é chartPanel‚ªActionListener‚É‘Î‰‚µ‚Ä‚¢‚È‚¢‚Ì‚ÅAMouseListener‚ÅÀ‘•
@@ -91,7 +92,7 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 		renderer.setSeriesShapesVisible(0, true);
 
 		ChartPanel chartpanel = new ChartPanel(chart);
-		chartpanel.addMouseListener(this);
+		chartpanel.addChartMouseListener(this);
 		chartpanel.setBounds(0, 0, width, height);
 
 		// TODO: ToolTip‚ªãè‚­•\¦‚Å‚«‚È‚¢
@@ -105,25 +106,16 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 	}
 
 	@Override
-	public void mouseClicked(MouseEvent e) {
+	public void chartMouseClicked(ChartMouseEvent arg0) {
+		// TODO Auto-generated method stub
 		CCGraphFrame frame = new CCGraphFrame(list);
 		frame.openGraph();
 		frame.setVisible(true);
 	}
 
 	@Override
-	public void mousePressed(MouseEvent e) {
-	}
+	public void chartMouseMoved(ChartMouseEvent arg0) {
+		// TODO Auto-generated method stub
 
-	@Override
-	public void mouseReleased(MouseEvent e) {
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
 	}
 }
