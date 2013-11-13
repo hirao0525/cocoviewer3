@@ -1,7 +1,11 @@
 package src.coco.controller;
 
-import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.Calendar;
 import java.util.List;
 
@@ -10,8 +14,10 @@ import src.coco.model.CCCompileErrorManager;
 public class CCCompileErrorConverter extends CCCsvFileLoader {
 
 	private CCCompileErrorManager manager;
-	private FileWriter out;
+	private File out;
+	private PrintWriter pw;
 	private int addErrorID;
+	private String CAMMA = ",";
 
 	public CCCompileErrorConverter(CCCompileErrorManager manager) {
 		this.manager = manager;
@@ -19,13 +25,32 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 	}
 
 	public void convertData(String infile, String outfile) throws IOException {
-		out = new FileWriter(outfile);
-		out.write("ErrorID,ファイル名,発生時刻,修正時間\n");
+		out = new File(outfile);
+		pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(
+				new FileOutputStream(out), "sjis")));
+		inputHeader(out);
 		loadData(infile);
-		out.close();
+		pw.flush();
+		pw.close();
+	}
+
+	private void inputHeader(File outFile) throws IOException {
+		StringBuffer buf = new StringBuffer();
+
+		buf.append("ErrorID");
+		buf.append(CAMMA);
+		buf.append("ファイル名");
+		buf.append(CAMMA);
+		buf.append("発生時刻");
+		buf.append(CAMMA);
+		buf.append("修正時間");
+		// buf.append("ErrorID,ファイル名,発生時刻,修正時間");
+		pw.println(buf.toString());
 	}
 
 	protected void separeteData(List<String> lines) throws IOException {
+		StringBuffer buf = new StringBuffer();
+
 		// errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
 		// 存在していないerrorIDの場合、新しくエラーメッセージを記録する
 		// 先にシンボルなどのチェックをしてからgetMessageIDをする形にし、（シンボル）などに対応した
@@ -57,10 +82,16 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		// System.out.println(errorID + "," + filename + "," + beginTime + ","
 		// + correctTime);
 
-		// ここでエラー発生数を数えるメリットはあるか？
-		// manager.totalErrorCountUp();
-		out.write(errorID + "," + filename + "," + beginTime + ","
-				+ correctTime + "\n");
+		buf.append(String.valueOf(errorID));
+		buf.append(CAMMA);
+		buf.append(filename);
+		buf.append(CAMMA);
+		buf.append(String.valueOf(beginTime));
+		buf.append(CAMMA);
+		buf.append(String.valueOf(correctTime));
+		pw.println(buf.toString());
+		// out.write(errorID + "," + filename + "," + beginTime + ","
+		// + correctTime + "\n");
 	}
 
 	private long calculationBeginTime(String data) {

@@ -3,8 +3,8 @@ package src.coco.model;
 import java.util.ArrayList;
 
 public class CCCompileErrorList {
-	private String message = "no name";
-	int rare = 0;
+	private String message = "null message";
+	private int rare = 0;
 	private ArrayList<CCCompileError> errors = new ArrayList<CCCompileError>();
 
 	public CCCompileErrorList() {
