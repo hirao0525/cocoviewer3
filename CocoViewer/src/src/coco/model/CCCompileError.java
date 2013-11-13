@@ -3,6 +3,7 @@ package src.coco.model;
 public class CCCompileError {
 
 	private int errorID;
+	private String projectname;
 	private String filename;
 	private long beginTime;
 	private int correctTime;
@@ -11,9 +12,10 @@ public class CCCompileError {
 
 	}
 
-	public void setData(int errorID, String filename, long beginTime,
-			int correctTime) {
+	public void setData(int errorID, String projectName, String filename,
+			long beginTime, int correctTime) {
 		this.errorID = errorID;
+		this.projectname = projectName;
 		this.filename = filename;
 		this.beginTime = beginTime;
 		this.correctTime = correctTime;
@@ -21,6 +23,10 @@ public class CCCompileError {
 
 	public long getBeginTime() {
 		return beginTime;
+	}
+
+	public String getProjectname() {
+		return projectname;
 	}
 
 	public String getFilename() {

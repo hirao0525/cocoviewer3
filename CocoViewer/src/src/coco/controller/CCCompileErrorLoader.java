@@ -21,12 +21,27 @@ public class CCCompileErrorLoader extends CCFileLoader {
 
 		// Œ©‚Ã‚ç‚¢‚½‚ßA’¼Úˆø”‚É“n‚·¨ˆêŸ•Ï”‚Éˆê’UŠi”[‚µ‚Ä‚©‚çˆø”‚ğ“n‚·A‚É•ÏX
 		String[] tokenizer = line.split(",");
-		int errorID = Integer.parseInt(tokenizer[0]);
-		String filename = tokenizer[1];
-		long beginTime = Long.parseLong(tokenizer[2]);
-		int correctTime = Integer.parseInt(tokenizer[3]);
+		int errorID;
+		String projectname = "";
+		String filename;
+		long beginTime;
+		int correctTime;
 
-		error.setData(errorID, filename, beginTime, correctTime);
+		// TODO ‚à‚¤­‚µ‚«‚ê‚¢‚É•`‚­
+		if (tokenizer.length == 5) {
+			errorID = Integer.parseInt(tokenizer[0]);
+			projectname = tokenizer[1];
+			filename = tokenizer[2];
+			beginTime = Long.parseLong(tokenizer[3]);
+			correctTime = Integer.parseInt(tokenizer[4]);
+		} else {
+			errorID = Integer.parseInt(tokenizer[0]);
+			filename = tokenizer[1];
+			beginTime = Long.parseLong(tokenizer[2]);
+			correctTime = Integer.parseInt(tokenizer[3]);
+		}
+
+		error.setData(errorID, projectname, filename, beginTime, correctTime);
 		manager.getList(errorID).addError(error);
 		manager.totalErrorCountUp();
 	}

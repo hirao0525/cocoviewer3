@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.util.Calendar;
 import java.util.List;
 
 import src.coco.model.CCCompileErrorManager;
@@ -14,22 +13,22 @@ import src.coco.model.CCCompileErrorManager;
 public class CCCompileErrorConverter extends CCCsvFileLoader {
 
 	private CCCompileErrorManager manager;
-	private File out;
-	private PrintWriter pw;
 	private int addErrorID;
 	private String CAMMA = ",";
+	PrintWriter pw;
 
 	public CCCompileErrorConverter(CCCompileErrorManager manager) {
 		this.manager = manager;
 		addErrorID = manager.getAllLists().size() + 1;
 	}
 
-	public void convertData(String infile, String outfile) throws IOException {
-		out = new File(outfile);
+	public void convertData(String inFileName, String outFileName)
+			throws IOException {
+		File outfile = new File(outFileName);
 		pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(
-				new FileOutputStream(out), "sjis")));
-		inputHeader(out);
-		loadData(infile);
+				new FileOutputStream(outfile), "sjis")));
+		inputHeader(outfile);
+		loadData(inFileName);
 		pw.flush();
 		pw.close();
 	}
@@ -51,16 +50,49 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 	protected void separeteData(List<String> lines) throws IOException {
 		StringBuffer buf = new StringBuffer();
 
+		// // errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
+		// // 存在していないerrorIDの場合、新しくエラーメッセージを記録する
+		// // 先にシンボルなどのチェックをしてからgetMessageIDをする形にし、（シンボル）などに対応した
+		// int errorID = 0;
+		// String element = "";
+		// if (lines.get(7) != null) {
+		// element = "（" + lines.get(7) + "）";
+		// }
+		//
+		// String message = lines.get(5) + element;
+		//
+		// try {
+		// errorID = manager.getMessagesID(message);
+		// } catch (Exception e) {
+		// errorID = addErrorID;
+		// manager.put(errorID, 6, message);
+		// addErrorID++;
+		// }
+		//
+		// String filename = lines.get(4);
+		//
+		// // 開始時刻はファイルのフルパスから持ってくる
+		// // long beginTime = calculationBeginTime(lines.get(14));
+		// long beginTime = 0;
+		//
+		// // 修正時間は取り出して時間を計算することに成功した
+		// int correctTime = calculationCorrectTime(lines.get(16));
+		//
+		// // debug
+		// // System.out.println(errorID + "," + filename + "," + beginTime +
+		// ","
+		// // + correctTime);
+
 		// errorIDはmessageListをmanagerに作ってindexOfメソッドで解決
 		// 存在していないerrorIDの場合、新しくエラーメッセージを記録する
 		// 先にシンボルなどのチェックをしてからgetMessageIDをする形にし、（シンボル）などに対応した
 		int errorID = 0;
 		String element = "";
-		if (lines.get(7) != null) {
-			element = "（" + lines.get(7) + "）";
+		if (lines.get(5) != null) {
+			element = "（" + lines.get(5) + "）";
 		}
 
-		String message = lines.get(5) + element;
+		String message = lines.get(3) + element;
 
 		try {
 			errorID = manager.getMessagesID(message);
@@ -70,19 +102,27 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 			addErrorID++;
 		}
 
-		String filename = lines.get(4);
+		// spiltは直接\\で区切ることができないので，いったん/に変換する
+		// 理由については後日調査すること
+		String filepath = lines.get(2).replace("\\", "/");
+		String[] filepathSegments = filepath.split("/");
+		String projectName = filepathSegments[filepathSegments.length - 4];
+		String filename = filepathSegments[filepathSegments.length - 1];
+		// String filename = lines.get(2);
 
-		long beginTime = calculationBeginTime(lines.get(14));
+		// 開始時刻はファイルのフルパスから持ってくる
+		long beginTime = Long
+				.parseLong(filepathSegments[filepathSegments.length - 3]);
+		// long beginTime = calculationBeginTime(lines.get(14));
 		// long beginTime = 0;
 
 		// 修正時間は取り出して時間を計算することに成功した
-		int correctTime = calculationCorrectTime(lines.get(16));
+		int correctTime = calculationCorrectTime(lines.get(14));
 
-		// debug
-		// System.out.println(errorID + "," + filename + "," + beginTime + ","
-		// + correctTime);
-
+		// データを書き込む
 		buf.append(String.valueOf(errorID));
+		buf.append(CAMMA);
+		buf.append(projectName);
 		buf.append(CAMMA);
 		buf.append(filename);
 		buf.append(CAMMA);
@@ -94,24 +134,24 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		// + correctTime + "\n");
 	}
 
-	private long calculationBeginTime(String data) {
-		String[] tokenizer = data.split(" ");
-		String[] dates = tokenizer[0].split("/");
-		String[] times = tokenizer[1].split(":");
-
-		int year = Integer.parseInt(dates[0]);
-		int month = Integer.parseInt(dates[1]);
-		int day = Integer.parseInt(dates[2]);
-		int hour = Integer.parseInt(times[0]);
-		int minute = Integer.parseInt(times[1]);
-		// int second = Integer.parseInt(times[2]);
-		int second = 0;
-
-		Calendar calender = Calendar.getInstance();
-		calender.set(year, month, day, hour, minute, second);
-
-		return calender.getTimeInMillis();
-	}
+	// private long calculationBeginTime(String data) {
+	// String[] tokenizer = data.split(" ");
+	// String[] dates = tokenizer[0].split("/");
+	// String[] times = tokenizer[1].split(":");
+	//
+	// int year = Integer.parseInt(dates[0]);
+	// int month = Integer.parseInt(dates[1]);
+	// int day = Integer.parseInt(dates[2]);
+	// int hour = Integer.parseInt(times[0]);
+	// int minute = Integer.parseInt(times[1]);
+	// // int second = Integer.parseInt(times[2]);
+	// int second = 0;
+	//
+	// Calendar calender = Calendar.getInstance();
+	// calender.set(year, month, day, hour, minute, second);
+	//
+	// return calender.getTimeInMillis();
+	// }
 
 	private int calculationCorrectTime(String time) {
 		String[] tokanizer = time.split(":");
