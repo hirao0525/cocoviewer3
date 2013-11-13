@@ -1,0 +1,380 @@
+1384310019890	Wed Nov 13 11:33:39 JST 2013	PROJECT_RECORD	START
+1384310019892	Wed Nov 13 11:33:39 JST 2013	LOG	INFO	LoggingThread Start
+1384310020427	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/CCConverterStart.java
+1384310020431	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/CCViewerStart.java
+1384310020437	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310020441	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/controller/CCCompileErrorConverter.java
+1384310020448	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384310020452	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/controller/CCCompileErrorLoader.java
+1384310020456	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/controller/CCCsvFileLoader.java
+1384310020460	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/controller/CCFileLoader.java
+1384310020475	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/model/CCCompileError.java
+1384310020483	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/model/CCCompileErrorList.java
+1384310020623	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/model/CCCompileErrorManager.java
+1384310020628	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/sourcefinder/CCSourceFinder.java
+1384310020634	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/view/CCAchivementButton.java
+1384310020640	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/view/CCAchivementFrame.java
+1384310020644	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/view/CCErrorElementButton2.java
+1384310020648	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/view/CCGraphBackgroundColor.java
+1384310020653	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/view/CCGraphFrame.java
+1384310020657	Wed Nov 13 11:33:40 JST 2013	COMMAND_RECORD	UPDATED	src/src/coco/view/CCMainFrame2.java
+1384310019893	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/CCConverterStart.java
+1384310019894	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/CCConverterStart.java
+1384310020693	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/CCConverterStart.java
+1384310019894	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/CCConverterStart.java
+1384310019894	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/CCViewerStart.java
+1384310019895	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/CCViewerStart.java
+1384310020734	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/CCViewerStart.java
+1384310019896	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/CCViewerStart.java
+1384310019896	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310019897	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310020763	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310019897	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310019897	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/controller/CCCompileErrorConverter.java
+1384310019898	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCompileErrorConverter.java
+1384310020790	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/controller/CCCompileErrorConverter.java
+1384310019898	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCompileErrorConverter.java
+1384310019899	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384310019899	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384310020816	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/controller/CCCompileErrorKindLoader.java
+1384310019900	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384310019900	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/controller/CCCompileErrorLoader.java
+1384310019900	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCompileErrorLoader.java
+1384310020841	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/controller/CCCompileErrorLoader.java
+1384310019901	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCompileErrorLoader.java
+1384310019901	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/controller/CCCsvFileLoader.java
+1384310019902	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCsvFileLoader.java
+1384310020866	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/controller/CCCsvFileLoader.java
+1384310019902	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCsvFileLoader.java
+1384310019902	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/controller/CCFileLoader.java
+1384310019903	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCFileLoader.java
+1384310020891	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/controller/CCFileLoader.java
+1384310019903	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCFileLoader.java
+1384310019904	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/model/CCCompileError.java
+1384310019904	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/model/CCCompileError.java
+1384310020916	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/model/CCCompileError.java
+1384310019904	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/model/CCCompileError.java
+1384310019905	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/model/CCCompileErrorList.java
+1384310019905	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/model/CCCompileErrorList.java
+1384310020942	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/model/CCCompileErrorList.java
+1384310019905	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/model/CCCompileErrorList.java
+1384310019906	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/model/CCCompileErrorManager.java
+1384310019906	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/model/CCCompileErrorManager.java
+1384310020967	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/model/CCCompileErrorManager.java
+1384310019906	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/model/CCCompileErrorManager.java
+1384310019907	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/sourcefinder/CCSourceFinder.java
+1384310019907	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/sourcefinder/CCSourceFinder.java
+1384310020991	Wed Nov 13 11:33:40 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/sourcefinder/CCSourceFinder.java
+1384310019907	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/sourcefinder/CCSourceFinder.java
+1384310019908	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/view/CCAchivementButton.java
+1384310019908	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCAchivementButton.java
+1384310021017	Wed Nov 13 11:33:41 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/view/CCAchivementButton.java
+1384310019909	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCAchivementButton.java
+1384310019909	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/view/CCAchivementFrame.java
+1384310019909	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCAchivementFrame.java
+1384310021044	Wed Nov 13 11:33:41 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/view/CCAchivementFrame.java
+1384310019910	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCAchivementFrame.java
+1384310019910	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/view/CCErrorElementButton2.java
+1384310019910	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCErrorElementButton2.java
+1384310021068	Wed Nov 13 11:33:41 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/view/CCErrorElementButton2.java
+1384310019911	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCErrorElementButton2.java
+1384310019911	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/view/CCGraphBackgroundColor.java
+1384310019911	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCGraphBackgroundColor.java
+1384310021093	Wed Nov 13 11:33:41 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/view/CCGraphBackgroundColor.java
+1384310019912	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCGraphBackgroundColor.java
+1384310019912	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/view/CCGraphFrame.java
+1384310019913	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCGraphFrame.java
+1384310021118	Wed Nov 13 11:33:41 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/view/CCGraphFrame.java
+1384310019913	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCGraphFrame.java
+1384310019913	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	FILE_CREATED	src/src/coco/view/CCMainFrame2.java
+1384310019914	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCMainFrame2.java
+1384310021144	Wed Nov 13 11:33:41 JST 2013	LOG	DEBUG	already stamped.: src/src/coco/view/CCMainFrame2.java
+1384310019914	Wed Nov 13 11:33:39 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCMainFrame2.java
+1384310081658	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/CCConverterStart.java/1384310019585.java
+1384310081659	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/CCConverterStart.java/1384310019585.java
+1384310081967	Wed Nov 13 11:34:41 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/CCConverterStart.java/1384310019585.java
+1384310081659	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/CCConverterStart.java/1384310019585.java
+1384310081659	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/CCViewerStart.java/1384310019593.java
+1384310081660	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/CCViewerStart.java/1384310019593.java
+1384310082007	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/CCViewerStart.java/1384310019593.java
+1384310081660	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/CCViewerStart.java/1384310019593.java
+1384310081660	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/controller/CCAddCompileErrorKinds.java/1384310019603.java
+1384310081661	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/controller/CCAddCompileErrorKinds.java/1384310019603.java
+1384310082046	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/controller/CCAddCompileErrorKinds.java/1384310019603.java
+1384310081661	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/controller/CCAddCompileErrorKinds.java/1384310019603.java
+1384310081661	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/controller/CCCompileErrorConverter.java/1384310019640.java
+1384310081662	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/controller/CCCompileErrorConverter.java/1384310019640.java
+1384310082085	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/controller/CCCompileErrorConverter.java/1384310019640.java
+1384310081662	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/controller/CCCompileErrorConverter.java/1384310019640.java
+1384310081662	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/controller/CCCompileErrorKindLoader.java/1384310019642.java
+1384310081663	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/controller/CCCompileErrorKindLoader.java/1384310019642.java
+1384310082125	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/controller/CCCompileErrorKindLoader.java/1384310019642.java
+1384310081663	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/controller/CCCompileErrorKindLoader.java/1384310019642.java
+1384310081664	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/controller/CCCompileErrorLoader.java/1384310019661.java
+1384310081664	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/controller/CCCompileErrorLoader.java/1384310019661.java
+1384310082162	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/controller/CCCompileErrorLoader.java/1384310019661.java
+1384310081665	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/controller/CCCompileErrorLoader.java/1384310019661.java
+1384310081665	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/controller/CCCsvFileLoader.java/1384310019663.java
+1384310081665	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/controller/CCCsvFileLoader.java/1384310019663.java
+1384310082202	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/controller/CCCsvFileLoader.java/1384310019663.java
+1384310081666	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/controller/CCCsvFileLoader.java/1384310019663.java
+1384310081666	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/controller/CCFileLoader.java/1384310019673.java
+1384310081666	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/controller/CCFileLoader.java/1384310019673.java
+1384310082241	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/controller/CCFileLoader.java/1384310019673.java
+1384310081667	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/controller/CCFileLoader.java/1384310019673.java
+1384310081667	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/model/CCCompileError.java/1384310019693.java
+1384310081668	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/model/CCCompileError.java/1384310019693.java
+1384310082279	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/model/CCCompileError.java/1384310019693.java
+1384310081668	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/model/CCCompileError.java/1384310019693.java
+1384310081669	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/model/CCCompileErrorList.java/1384310019697.java
+1384310081669	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/model/CCCompileErrorList.java/1384310019697.java
+1384310082318	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/model/CCCompileErrorList.java/1384310019697.java
+1384310081670	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/model/CCCompileErrorList.java/1384310019697.java
+1384310081671	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/model/CCCompileErrorManager.java/1384310019708.java
+1384310081671	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/model/CCCompileErrorManager.java/1384310019708.java
+1384310082354	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/model/CCCompileErrorManager.java/1384310019708.java
+1384310081671	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/model/CCCompileErrorManager.java/1384310019708.java
+1384310081672	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/sourcefinder/CCSourceFinder.java/1384310019710.java
+1384310081672	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/sourcefinder/CCSourceFinder.java/1384310019710.java
+1384310082389	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/sourcefinder/CCSourceFinder.java/1384310019710.java
+1384310081672	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/sourcefinder/CCSourceFinder.java/1384310019710.java
+1384310081673	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/view/CCAchivementButton.java/1384310019713.java
+1384310081673	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/view/CCAchivementButton.java/1384310019713.java
+1384310082425	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/view/CCAchivementButton.java/1384310019713.java
+1384310081674	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/view/CCAchivementButton.java/1384310019713.java
+1384310081674	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/view/CCAchivementFrame.java/1384310019714.java
+1384310081674	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/view/CCAchivementFrame.java/1384310019714.java
+1384310082462	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/view/CCAchivementFrame.java/1384310019714.java
+1384310081675	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/view/CCAchivementFrame.java/1384310019714.java
+1384310081675	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/view/CCErrorElementButton2.java/1384310019724.java
+1384310081675	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/view/CCErrorElementButton2.java/1384310019724.java
+1384310082499	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/view/CCErrorElementButton2.java/1384310019724.java
+1384310081676	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/view/CCErrorElementButton2.java/1384310019724.java
+1384310081676	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/view/CCGraphBackgroundColor.java/1384310019725.java
+1384310081676	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/view/CCGraphBackgroundColor.java/1384310019725.java
+1384310082535	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/view/CCGraphBackgroundColor.java/1384310019725.java
+1384310081677	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/view/CCGraphBackgroundColor.java/1384310019725.java
+1384310081677	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/view/CCGraphFrame.java/1384310019752.java
+1384310081677	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/view/CCGraphFrame.java/1384310019752.java
+1384310082571	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/view/CCGraphFrame.java/1384310019752.java
+1384310081678	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/view/CCGraphFrame.java/1384310019752.java
+1384310081678	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/view/CCMainFrame2.java/1384310019762.java
+1384310081678	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/view/CCMainFrame2.java/1384310019762.java
+1384310082607	Wed Nov 13 11:34:42 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/view/CCMainFrame2.java/1384310019762.java
+1384310081679	Wed Nov 13 11:34:41 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/view/CCMainFrame2.java/1384310019762.java
+1384310085294	Wed Nov 13 11:34:45 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCConverterStart.java
+1384310097584	Wed Nov 13 11:34:57 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCConverterStart.java
+1384310098676	Wed Nov 13 11:34:58 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCConverterStart.java
+1384310879428	Wed Nov 13 11:47:59 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCConverterStart.java
+1384310888973	Wed Nov 13 11:48:08 JST 2013	PROJECT_RECORD	EXTENDED	org.eclipse.ui.file.properties	true
+1384310890056	Wed Nov 13 11:48:10 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCConverterStart.java
+1384310896521	Wed Nov 13 11:48:16 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	0	13	
+1384310896528	Wed Nov 13 11:48:16 JST 2013	COMMAND_RECORD	DELETE	src/src/coco/CCConverterStart.java	org.eclipse.ui.edit.delete
+1384310896684	Wed Nov 13 11:48:16 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	0	2	
+1384310896689	Wed Nov 13 11:48:16 JST 2013	COMMAND_RECORD	DELETE	src/src/coco/CCConverterStart.java	org.eclipse.ui.edit.delete
+1384310897020	Wed Nov 13 11:48:17 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	0	2	
+1384310897047	Wed Nov 13 11:48:17 JST 2013	COMMAND_RECORD	DELETE	src/src/coco/CCConverterStart.java	org.eclipse.ui.edit.delete
+1384310897356	Wed Nov 13 11:48:17 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCConverterStart.java
+1384310898225	Wed Nov 13 11:48:18 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	31	189	
+1384310898226	Wed Nov 13 11:48:18 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	31	0	import src.coco.model.CCCompileErrorManager;\r\n
+1384310898226	Wed Nov 13 11:48:18 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	31	0	import src.coco.controller.CCCompileErrorKindLoader;\r\n
+1384310898227	Wed Nov 13 11:48:18 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	31	0	import src.coco.controller.CCCompileErrorConverter;\r\n
+1384310898227	Wed Nov 13 11:48:18 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	31	0	import src.coco.controller.CCAddCompileErrorKinds;\r\n
+1384310898318	Wed Nov 13 11:48:18 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/CCConverterStart.java
+1384310898319	Wed Nov 13 11:48:18 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/CCConverterStart.java
+1384310898326	Wed Nov 13 11:48:18 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCConverterStart.java
+1384310898689	Wed Nov 13 11:48:18 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCConverterStart.java
+1384310899453	Wed Nov 13 11:48:19 JST 2013	COMMAND_RECORD	FILE_CREATED	.pres2/src/src/coco/CCConverterStart.java/1384310898313.java
+1384310899454	Wed Nov 13 11:48:19 JST 2013	COMMAND_RECORD	SAVE	.pres2/src/src/coco/CCConverterStart.java/1384310898313.java
+1384310899507	Wed Nov 13 11:48:19 JST 2013	LOG	DEBUG	RecordingFile Not Found.: .pres2/src/src/coco/CCConverterStart.java/1384310898313.java
+1384310899454	Wed Nov 13 11:48:19 JST 2013	COMMAND_RECORD	COMPILE	.pres2/src/src/coco/CCConverterStart.java/1384310898313.java
+1384310899466	Wed Nov 13 11:48:19 JST 2013	PROJECT_RECORD	EXTENDED	org.eclipse.ui.file.refresh	null
+1384310902683	Wed Nov 13 11:48:22 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCConverterStart.java
+1384310910979	Wed Nov 13 11:48:30 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/CCConverterStart.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384310915980	Wed Nov 13 11:48:35 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCConverterStart.java
+1384310916152	Wed Nov 13 11:48:36 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCConverterStart.java
+1384310916167	Wed Nov 13 11:48:36 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCConverterStart.java	0	0	package src.coco;\r\n\r\n
+1384310920763	Wed Nov 13 11:48:40 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCConverterStart.java
+1384310920810	Wed Nov 13 11:48:40 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/CCConverterStart.java
+1384310920811	Wed Nov 13 11:48:40 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/CCConverterStart.java
+1384310920813	Wed Nov 13 11:48:40 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCConverterStart.java
+1384310923898	Wed Nov 13 11:48:43 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/CCConverterStart.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384310930153	Wed Nov 13 11:48:50 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCConverterStart.java
+1384310930458	Wed Nov 13 11:48:50 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCViewerStart.java
+1384310932737	Wed Nov 13 11:48:52 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	8	0	s
+1384310932970	Wed Nov 13 11:48:52 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	9	0	r
+1384310933210	Wed Nov 13 11:48:53 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	10	0	c
+1384310933531	Wed Nov 13 11:48:53 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	11	0	.
+1384310935209	Wed Nov 13 11:48:55 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCViewerStart.java
+1384310935762	Wed Nov 13 11:48:55 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	21	170	
+1384310935763	Wed Nov 13 11:48:55 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	21	0	import src.coco.view.CCMainFrame2;\r\n
+1384310935764	Wed Nov 13 11:48:55 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	21	0	import src.coco.model.CCCompileErrorManager;\r\n
+1384310935765	Wed Nov 13 11:48:55 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	21	0	import src.coco.controller.CCCompileErrorLoader;\r\n
+1384310935766	Wed Nov 13 11:48:55 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/CCViewerStart.java	21	0	import src.coco.controller.CCCompileErrorKindLoader;\r\n
+1384310935877	Wed Nov 13 11:48:55 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/CCViewerStart.java
+1384310935878	Wed Nov 13 11:48:55 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/CCViewerStart.java
+1384310935881	Wed Nov 13 11:48:55 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCViewerStart.java
+1384310938970	Wed Nov 13 11:48:58 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCViewerStart.java
+1384310939982	Wed Nov 13 11:48:59 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310946936	Wed Nov 13 11:49:06 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310974624	Wed Nov 13 11:49:34 JST 2013	PROJECT_RECORD	EXTENDED	org.eclipse.ui.file.properties	true
+1384310975439	Wed Nov 13 11:49:35 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310976793	Wed Nov 13 11:49:36 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/controller/CCAddCompileErrorKinds.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384310981564	Wed Nov 13 11:49:41 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310981737	Wed Nov 13 11:49:41 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310981748	Wed Nov 13 11:49:41 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/controller/CCAddCompileErrorKinds.java	8	15	src.coco.controller
+1384310983377	Wed Nov 13 11:49:43 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310983980	Wed Nov 13 11:49:43 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/controller/CCAddCompileErrorKinds.java	213	42	
+1384310983980	Wed Nov 13 11:49:43 JST 2013	TEXTEDIT_RECORD	ECLIPSE	src/src/coco/controller/CCAddCompileErrorKinds.java	213	0	import src.coco.model.CCCompileErrorManager;\r\n
+1384310984092	Wed Nov 13 11:49:44 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310984093	Wed Nov 13 11:49:44 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310984097	Wed Nov 13 11:49:44 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310990784	Wed Nov 13 11:49:50 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCAddCompileErrorKinds.java
+1384310992663	Wed Nov 13 11:49:52 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorConverter.java
+1384310994042	Wed Nov 13 11:49:54 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/controller/CCCompileErrorConverter.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384310996107	Wed Nov 13 11:49:56 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorConverter.java
+1384310996344	Wed Nov 13 11:49:56 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorConverter.java
+1384310998206	Wed Nov 13 11:49:58 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/controller/CCCompileErrorConverter.java	org.eclipse.ui.edit.selectAll
+1384310999068	Wed Nov 13 11:49:59 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorConverter.java
+1384310999770	Wed Nov 13 11:49:59 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCompileErrorConverter.java
+1384310999770	Wed Nov 13 11:49:59 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCompileErrorConverter.java
+1384310999774	Wed Nov 13 11:49:59 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorConverter.java
+1384311001487	Wed Nov 13 11:50:01 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorConverter.java
+1384311001756	Wed Nov 13 11:50:01 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311003519	Wed Nov 13 11:50:03 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/controller/CCCompileErrorKindLoader.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311009216	Wed Nov 13 11:50:09 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311009235	Wed Nov 13 11:50:09 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311011179	Wed Nov 13 11:50:11 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311011874	Wed Nov 13 11:50:11 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311011874	Wed Nov 13 11:50:11 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311011878	Wed Nov 13 11:50:11 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311014390	Wed Nov 13 11:50:14 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorKindLoader.java
+1384311015352	Wed Nov 13 11:50:15 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorLoader.java
+1384311016604	Wed Nov 13 11:50:16 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/controller/CCCompileErrorLoader.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311017994	Wed Nov 13 11:50:17 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorLoader.java
+1384311018797	Wed Nov 13 11:50:18 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorLoader.java
+1384311020220	Wed Nov 13 11:50:20 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorLoader.java
+1384311020928	Wed Nov 13 11:50:20 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCompileErrorLoader.java
+1384311020928	Wed Nov 13 11:50:20 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCompileErrorLoader.java
+1384311020932	Wed Nov 13 11:50:20 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCompileErrorLoader.java
+1384311021854	Wed Nov 13 11:50:21 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCompileErrorLoader.java
+1384311022146	Wed Nov 13 11:50:22 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCsvFileLoader.java
+1384311023949	Wed Nov 13 11:50:23 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/controller/CCCsvFileLoader.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311025171	Wed Nov 13 11:50:25 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCsvFileLoader.java
+1384311025326	Wed Nov 13 11:50:25 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCsvFileLoader.java
+1384311026539	Wed Nov 13 11:50:26 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCsvFileLoader.java
+1384311026580	Wed Nov 13 11:50:26 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCCsvFileLoader.java
+1384311026581	Wed Nov 13 11:50:26 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCCsvFileLoader.java
+1384311026585	Wed Nov 13 11:50:26 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCCsvFileLoader.java
+1384311027762	Wed Nov 13 11:50:27 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCCsvFileLoader.java
+1384311028086	Wed Nov 13 11:50:28 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCFileLoader.java
+1384311029769	Wed Nov 13 11:50:29 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/controller/CCFileLoader.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311031657	Wed Nov 13 11:50:31 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCFileLoader.java
+1384311031973	Wed Nov 13 11:50:31 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCFileLoader.java
+1384311033003	Wed Nov 13 11:50:33 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCFileLoader.java
+1384311033036	Wed Nov 13 11:50:33 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/controller/CCFileLoader.java
+1384311033037	Wed Nov 13 11:50:33 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/controller/CCFileLoader.java
+1384311033039	Wed Nov 13 11:50:33 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/controller/CCFileLoader.java
+1384311034999	Wed Nov 13 11:50:34 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/controller/CCFileLoader.java
+1384311036696	Wed Nov 13 11:50:36 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileError.java
+1384311038871	Wed Nov 13 11:50:38 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/model/CCCompileError.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311039561	Wed Nov 13 11:50:39 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileError.java
+1384311039697	Wed Nov 13 11:50:39 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileError.java
+1384311040779	Wed Nov 13 11:50:40 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileError.java
+1384311040829	Wed Nov 13 11:50:40 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/model/CCCompileError.java
+1384311040829	Wed Nov 13 11:50:40 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/model/CCCompileError.java
+1384311040833	Wed Nov 13 11:50:40 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileError.java
+1384311042511	Wed Nov 13 11:50:42 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileError.java
+1384311042790	Wed Nov 13 11:50:42 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileErrorList.java
+1384311044015	Wed Nov 13 11:50:44 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/model/CCCompileErrorList.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311045136	Wed Nov 13 11:50:45 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileErrorList.java
+1384311045252	Wed Nov 13 11:50:45 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileErrorList.java
+1384311045758	Wed Nov 13 11:50:45 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileErrorList.java
+1384311045786	Wed Nov 13 11:50:45 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/model/CCCompileErrorList.java
+1384311045786	Wed Nov 13 11:50:45 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/model/CCCompileErrorList.java
+1384311045789	Wed Nov 13 11:50:45 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileErrorList.java
+1384311046548	Wed Nov 13 11:50:46 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileErrorList.java
+1384311047175	Wed Nov 13 11:50:47 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileErrorManager.java
+1384311048480	Wed Nov 13 11:50:48 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/model/CCCompileErrorManager.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311049947	Wed Nov 13 11:50:49 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileErrorManager.java
+1384311050133	Wed Nov 13 11:50:50 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileErrorManager.java
+1384311050668	Wed Nov 13 11:50:50 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileErrorManager.java
+1384311050734	Wed Nov 13 11:50:50 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/model/CCCompileErrorManager.java
+1384311050735	Wed Nov 13 11:50:50 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/model/CCCompileErrorManager.java
+1384311050738	Wed Nov 13 11:50:50 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/model/CCCompileErrorManager.java
+1384311053326	Wed Nov 13 11:50:53 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/model/CCCompileErrorManager.java
+1384311054530	Wed Nov 13 11:50:54 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311055932	Wed Nov 13 11:50:55 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/sourcefinder/CCSourceFinder.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311056802	Wed Nov 13 11:50:56 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311057094	Wed Nov 13 11:50:57 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311057627	Wed Nov 13 11:50:57 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311058288	Wed Nov 13 11:50:58 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311058288	Wed Nov 13 11:50:58 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311058292	Wed Nov 13 11:50:58 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311058606	Wed Nov 13 11:50:58 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/sourcefinder/CCSourceFinder.java
+1384311060177	Wed Nov 13 11:51:00 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCAchivementButton.java
+1384311061535	Wed Nov 13 11:51:01 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/view/CCAchivementButton.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311062425	Wed Nov 13 11:51:02 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCAchivementButton.java
+1384311062587	Wed Nov 13 11:51:02 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCAchivementButton.java
+1384311063563	Wed Nov 13 11:51:03 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCAchivementButton.java
+1384311064221	Wed Nov 13 11:51:04 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCAchivementButton.java
+1384311064221	Wed Nov 13 11:51:04 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCAchivementButton.java
+1384311064225	Wed Nov 13 11:51:04 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCAchivementButton.java
+1384311064725	Wed Nov 13 11:51:04 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCAchivementButton.java
+1384311065088	Wed Nov 13 11:51:05 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCAchivementFrame.java
+1384311066414	Wed Nov 13 11:51:06 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/view/CCAchivementFrame.java	org.eclipse.ui.edit.selectAll
+1384311069562	Wed Nov 13 11:51:09 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/view/CCAchivementFrame.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311070137	Wed Nov 13 11:51:10 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCAchivementFrame.java
+1384311070284	Wed Nov 13 11:51:10 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCAchivementFrame.java
+1384311071212	Wed Nov 13 11:51:11 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCAchivementFrame.java
+1384311071878	Wed Nov 13 11:51:11 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCAchivementFrame.java
+1384311071878	Wed Nov 13 11:51:11 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCAchivementFrame.java
+1384311071882	Wed Nov 13 11:51:11 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCAchivementFrame.java
+1384311072357	Wed Nov 13 11:51:12 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCAchivementFrame.java
+1384311072629	Wed Nov 13 11:51:12 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCErrorElementButton2.java
+1384311074318	Wed Nov 13 11:51:14 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCErrorElementButton2.java
+1384311074592	Wed Nov 13 11:51:14 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCErrorElementButton2.java
+1384311075967	Wed Nov 13 11:51:15 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/view/CCErrorElementButton2.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311077240	Wed Nov 13 11:51:17 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCErrorElementButton2.java
+1384311077523	Wed Nov 13 11:51:17 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCErrorElementButton2.java
+1384311078571	Wed Nov 13 11:51:18 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCErrorElementButton2.java
+1384311079267	Wed Nov 13 11:51:19 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCErrorElementButton2.java
+1384311079268	Wed Nov 13 11:51:19 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCErrorElementButton2.java
+1384311079272	Wed Nov 13 11:51:19 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCErrorElementButton2.java
+1384311079508	Wed Nov 13 11:51:19 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCErrorElementButton2.java
+1384311079757	Wed Nov 13 11:51:19 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCGraphBackgroundColor.java
+1384311079802	Wed Nov 13 11:51:19 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCGraphBackgroundColor.java
+1384311082854	Wed Nov 13 11:51:22 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCGraphBackgroundColor.java
+1384311085743	Wed Nov 13 11:51:25 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/view/CCGraphBackgroundColor.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311086648	Wed Nov 13 11:51:26 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCGraphBackgroundColor.java
+1384311086787	Wed Nov 13 11:51:26 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCGraphBackgroundColor.java
+1384311087932	Wed Nov 13 11:51:27 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCGraphBackgroundColor.java
+1384311087967	Wed Nov 13 11:51:27 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCGraphBackgroundColor.java
+1384311087968	Wed Nov 13 11:51:27 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCGraphBackgroundColor.java
+1384311087970	Wed Nov 13 11:51:27 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCGraphBackgroundColor.java
+1384311088741	Wed Nov 13 11:51:28 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCGraphBackgroundColor.java
+1384311089559	Wed Nov 13 11:51:29 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCMainFrame2.java
+1384311091150	Wed Nov 13 11:51:31 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/view/CCMainFrame2.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311091894	Wed Nov 13 11:51:31 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCMainFrame2.java
+1384311092043	Wed Nov 13 11:51:32 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCMainFrame2.java
+1384311093099	Wed Nov 13 11:51:33 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCMainFrame2.java
+1384311093767	Wed Nov 13 11:51:33 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCMainFrame2.java
+1384311093767	Wed Nov 13 11:51:33 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCMainFrame2.java
+1384311093771	Wed Nov 13 11:51:33 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCMainFrame2.java
+1384311094180	Wed Nov 13 11:51:34 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCMainFrame2.java
+1384311094435	Wed Nov 13 11:51:34 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCGraphFrame.java
+1384311096136	Wed Nov 13 11:51:36 JST 2013	COMMAND_RECORD	EXTENDED	src/src/coco/view/CCGraphFrame.java	org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals
+1384311097249	Wed Nov 13 11:51:37 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCGraphFrame.java
+1384311097363	Wed Nov 13 11:51:37 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCGraphFrame.java
+1384311098251	Wed Nov 13 11:51:38 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCGraphFrame.java
+1384311098927	Wed Nov 13 11:51:38 JST 2013	COMMAND_RECORD	SAVE	src/src/coco/view/CCGraphFrame.java
+1384311098928	Wed Nov 13 11:51:38 JST 2013	COMMAND_RECORD	COMPILE	src/src/coco/view/CCGraphFrame.java
+1384311098932	Wed Nov 13 11:51:38 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/view/CCGraphFrame.java
+1384311101116	Wed Nov 13 11:51:41 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/view/CCGraphFrame.java
+1384311105659	Wed Nov 13 11:51:45 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCViewerStart.java
+1384311109712	Wed Nov 13 11:51:49 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCViewerStart.java
+1384311117661	Wed Nov 13 11:51:57 JST 2013	COMMAND_RECORD	FOCUS_GAINED	src/src/coco/CCViewerStart.java
+1384311118878	Wed Nov 13 11:51:58 JST 2013	COMMAND_RECORD	FOCUS_LOST	src/src/coco/CCViewerStart.java
+1384311159791	Wed Nov 13 11:52:39 JST 2013	PROJECT_RECORD	EXTENDED	org.eclipse.egit.ui.team.Commit	null
+1384311180611	Wed Nov 13 11:53:00 JST 2013	PROJECT_RECORD	EXTENDED	org.eclipse.egit.ui.RepositoriesViewImportProjects	null
+1384311194197	Wed Nov 13 11:53:14 JST 2013	PROJECT_RECORD	EXTENDED	org.eclipse.egit.ui.team.SimplePush	null
