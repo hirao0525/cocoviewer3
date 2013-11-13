@@ -13,6 +13,7 @@ import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.CategoryAxis;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
@@ -80,12 +81,17 @@ public class CCGraphFrame extends JFrame {
 		// TODO: CategoryPlotを継承してクリック可能にして使える情報を増やすこと
 		CategoryPlot plot = chart.getCategoryPlot();
 
-		// 縦軸の設定 ・ 軸は整数値のみを指すようにする
+		// y軸の設定 ・ 軸は整数値のみを指すようにする
 		NumberAxis numberAxis = (NumberAxis) plot.getRangeAxis();
 		numberAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
 		numberAxis.setVerticalTickLabels(false);
 		numberAxis.setAutoRangeStickyZero(true);
 		numberAxis.setRange(0, 120);
+		numberAxis.setLabelFont(new Font("Font2DHandle", Font.PLAIN, 16));
+
+		// x軸の設定
+		CategoryAxis domainAxis = (CategoryAxis) plot.getDomainAxis();
+		domainAxis.setLabelFont(new Font("Font2DHandle", Font.PLAIN, 16));
 
 		// プロットの設定
 		LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot

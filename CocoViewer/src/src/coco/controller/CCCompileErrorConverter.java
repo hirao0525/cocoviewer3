@@ -38,6 +38,8 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 
 		buf.append("ErrorID");
 		buf.append(CAMMA);
+		buf.append("プロジェクト名");
+		buf.append(CAMMA);
 		buf.append("ファイル名");
 		buf.append(CAMMA);
 		buf.append("発生時刻");
@@ -106,7 +108,7 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		// 理由については後日調査すること
 		String filepath = lines.get(2).replace("\\", "/");
 		String[] filepathSegments = filepath.split("/");
-		String projectName = filepathSegments[filepathSegments.length - 4];
+		String projectname = filepathSegments[filepathSegments.length - 4];
 		String filename = filepathSegments[filepathSegments.length - 1];
 		// String filename = lines.get(2);
 
@@ -122,7 +124,7 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		// データを書き込む
 		buf.append(String.valueOf(errorID));
 		buf.append(CAMMA);
-		buf.append(projectName);
+		buf.append(projectname);
 		buf.append(CAMMA);
 		buf.append(filename);
 		buf.append(CAMMA);

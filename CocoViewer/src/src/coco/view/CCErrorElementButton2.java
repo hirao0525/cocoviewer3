@@ -11,6 +11,7 @@ import org.jfree.chart.ChartColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.CategoryAxis;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
@@ -62,8 +63,6 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 				"修正時間", dataset, PlotOrientation.VERTICAL, false, false, false);
 		// フォント指定しないと文字化けする
 		chart.getTitle().setFont(new Font("Font2DHandle", Font.PLAIN, 20));
-		// chart.getLegend().setItemFont(new Font("Font2DHandle", Font.PLAIN,
-		// 8));
 
 		// 背景色のセット
 		chart.setBackgroundPaint(new CCGraphBackgroundColor().graphColor(list
@@ -78,6 +77,11 @@ public class CCErrorElementButton2 extends JButton implements MouseListener {
 		numberAxis.setVerticalTickLabels(false);
 		numberAxis.setAutoRangeStickyZero(true);
 		numberAxis.setRangeWithMargins(0, 60);
+		numberAxis.setLabelFont(new Font("Font2DHandle", Font.PLAIN, 16));
+
+		// x軸の設定
+		CategoryAxis domainAxis = (CategoryAxis) plot.getDomainAxis();
+		domainAxis.setLabelFont(new Font("Font2DHandle", Font.PLAIN, 16));
 
 		// プロットの設定
 		LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot
