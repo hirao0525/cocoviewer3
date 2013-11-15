@@ -37,7 +37,7 @@ public class CCCompileError {
 		return errorID;
 	}
 
-	public long getCorrectTime() {
+	public int getCorrectTime() {
 		return correctTime;
 	}
 }

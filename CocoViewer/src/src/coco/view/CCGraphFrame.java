@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
 import javax.swing.JToolTip;
 
 import org.jfree.chart.ChartColor;
@@ -136,12 +137,13 @@ public class CCGraphFrame extends JFrame {
 	// TODO リスト部分の実装
 	private void makeSourceList() {
 		// java7からDefaultListModelに格納するクラスを指定しなければならない
-		DefaultListModel<CCCompileError> model = new DefaultListModel<CCCompileError>();
-		for (CCCompileError compileError : list.getErrors()) {
-			model.addElement(compileError);
+		DefaultListModel<String> model = new DefaultListModel<String>();
+		for (int i = 0; i < list.getErrors().size(); i++) {
+			model.addElement(i + " 回目の修正時間 ： "
+					+ list.getErrors().get(i).getCorrectTime() + "秒");
 		}
 
-		final JList<CCCompileError> jlist = new JList<CCCompileError>(model);
+		final JList<String> jlist = new JList<String>(model);
 		jlist.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 				// 左クリック二回でオープンする
@@ -173,10 +175,22 @@ public class CCGraphFrame extends JFrame {
 							System.out.println("find!  "
 									+ list.getErrors().get(index));
 							// プログラムファイルの内容を表示する
+							StringBuffer buf = new StringBuffer();
 							String line = "";
 							if ((line = file.loadText()) != null) {
+								buf.append(line);
+								buf.append("\n");
 								System.out.println(line);
 							}
+
+							// TODO RESourceViewerを使って表示できるようにしましょう
+							JTextPane textPane = new JTextPane();
+							textPane.setText(buf.toString());
+							textPane.setCaretPosition(0);
+							JFrame frame = new JFrame();
+							frame.add(textPane, BorderLayout.CENTER);
+							frame.pack();
+							frame.setVisible(true);
 						}
 					}
 				}
