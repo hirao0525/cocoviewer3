@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 
 import src.coco.model.CCCompileErrorList;
 import src.coco.model.CCCompileErrorManager;
+import clib.common.filesystem.CDirectory;
 
 public class CCMainFrame2 extends JFrame {
 
@@ -36,17 +37,17 @@ public class CCMainFrame2 extends JFrame {
 	// For GUI
 	private JPanel rootPanel = new JPanel();
 
-	public CCMainFrame2(CCCompileErrorManager manager) {
+	public CCMainFrame2(CCCompileErrorManager manager, CDirectory baseDir) {
 		this.manager = manager;
 		// this.height = GraphicsEnvironment.getLocalGraphicsEnvironment()
 		// .getMaximumWindowBounds().height - 25;
 		// Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		// width = d.width - ERRORBUTTONWIDTH * 2;
 		// height = d.height - ERRORBUTTONHEIGHT * 2;
-		initialize();
+		initialize(baseDir);
 	}
 
-	private void initialize() {
+	private void initialize(CDirectory baseDir) {
 		// rootPanel のレイアウトをリセットする
 		rootPanel.setLayout(null);
 
@@ -57,7 +58,7 @@ public class CCMainFrame2 extends JFrame {
 		setCompileErrorNumber();
 
 		// ボタンを配置する
-		setMiniGraphButton();
+		setMiniGraphButton(baseDir);
 
 		// レイアウトした配置でコンテンツを追加
 		getContentPane().add(rootPanel, BorderLayout.CENTER);
@@ -91,13 +92,13 @@ public class CCMainFrame2 extends JFrame {
 		// rootPanel.add(achivementButton);
 	}
 
-	private void setMiniGraphButton() {
+	private void setMiniGraphButton(CDirectory baseDir) {
 		ArrayList<CCErrorElementButton2> buttons = new ArrayList<CCErrorElementButton2>();
 
 		// エラーIDごとの数値を書き込み、ボタンを実装する
 		for (CCCompileErrorList list : manager.getAllLists()) {
 			CCErrorElementButton2 button = new CCErrorElementButton2(list,
-					ERRORBUTTONWIDTH, ERRORBUTTONHEIGHT);
+					ERRORBUTTONWIDTH, ERRORBUTTONHEIGHT, baseDir);
 			buttons.add(button);
 		}
 

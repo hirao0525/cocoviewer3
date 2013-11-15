@@ -5,6 +5,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
@@ -24,7 +26,12 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+import src.coco.model.CCCompileError;
 import src.coco.model.CCCompileErrorList;
+import clib.common.filesystem.CDirectory;
+import clib.common.filesystem.CFile;
+import clib.common.filesystem.CFileElement;
+import clib.common.filesystem.CPath;
 
 public class CCGraphFrame extends JFrame {
 
@@ -39,9 +46,12 @@ public class CCGraphFrame extends JFrame {
 	private JPanel rootPanel = new JPanel();
 	private CCCompileErrorList list;
 
+	private CDirectory baseDir;
+
 	// default
-	public CCGraphFrame(CCCompileErrorList list) {
+	public CCGraphFrame(CCCompileErrorList list, CDirectory baseDir) {
 		this.list = list;
+		this.baseDir = baseDir;
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 		width = (int) (d.width * 0.75);
 		height = (int) (d.height * 0.75);
@@ -125,11 +135,55 @@ public class CCGraphFrame extends JFrame {
 
 	// TODO リスト部分の実装
 	private void makeSourceList() {
-		DefaultListModel model = new DefaultListModel();
-		for (int i = 0; i < list.getErrors().size(); i++) {
-			model.addElement((i + 1) + "回目");
+		// java7からDefaultListModelに格納するクラスを指定しなければならない
+		DefaultListModel<CCCompileError> model = new DefaultListModel<CCCompileError>();
+		for (CCCompileError compileError : list.getErrors()) {
+			model.addElement(compileError);
 		}
-		JList jlist = new JList(model);
+
+		final JList<CCCompileError> jlist = new JList<CCCompileError>(model);
+		jlist.addMouseListener(new MouseAdapter() {
+			public void mousePressed(MouseEvent e) {
+				// 左クリック二回でオープンする
+				if (e.getButton() == MouseEvent.BUTTON1
+						&& e.getClickCount() >= 2) {
+					// 選択された要素がリストの何番目であるのかを取得し，その時のコンパイルエラー情報を取得
+					int index = jlist.getSelectedIndex();
+					CCCompileError compileError = list.getErrors().get(index);
+
+					// ファイルパスに必要な要素の取り出し
+					String projectname = compileError.getProjectname();
+					String beginTime = String.valueOf(compileError
+							.getBeginTime());
+					String filename = compileError.getFilename();
+
+					// コンパイルエラー発生時のファイルパスを設定
+					CPath path = new CPath("\\ppv.data\\cash\\hoge\\"
+							+ projectname + "\\" + beginTime
+							+ "\\ProjectBase\\" + filename);
+
+					// 論プロからの起動を想定，CocoViewerのみではbaseDirはnull
+					if (baseDir == null) {
+						System.out.println("baseDir null");
+					} else {
+						// プログラムソースを捜し，それがnullでないこと＋ファイルであることを確認
+						CFileElement fileElement = baseDir.findChild(path);
+						if (fileElement.isFile() && fileElement != null) {
+							CFile file = (CFile) fileElement;
+							System.out.println("find!  "
+									+ list.getErrors().get(index));
+							// プログラムファイルの内容を表示する
+							String line = "";
+							if ((line = file.loadText()) != null) {
+								System.out.println(line);
+							}
+						}
+					}
+				}
+			}
+		});
+
+		// TODO スクロールパネルのサイズ調整
 		JScrollPane scrollPanel = new JScrollPane();
 		scrollPanel.getViewport().setView(jlist);
 

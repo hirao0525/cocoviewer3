@@ -19,6 +19,7 @@ import org.jfree.chart.renderer.category.LineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 import src.coco.model.CCCompileErrorList;
+import clib.common.filesystem.CDirectory;
 
 public class CCErrorElementButton2 extends JButton implements
 		ChartMouseListener {
@@ -33,11 +34,14 @@ public class CCErrorElementButton2 extends JButton implements
 	private int height;
 
 	private CCCompileErrorList list;
+	private CDirectory baseDir;
 
-	public CCErrorElementButton2(CCCompileErrorList list, int width, int height) {
+	public CCErrorElementButton2(CCCompileErrorList list, int width,
+			int height, CDirectory baseDir) {
 		this.list = list;
 		this.width = width;
 		this.height = height;
+		this.baseDir = baseDir;
 		super.setLayout(null);
 		makeGraph();
 	}
@@ -108,7 +112,7 @@ public class CCErrorElementButton2 extends JButton implements
 	@Override
 	public void chartMouseClicked(ChartMouseEvent arg0) {
 		// TODO Auto-generated method stub
-		CCGraphFrame frame = new CCGraphFrame(list);
+		CCGraphFrame frame = new CCGraphFrame(list, baseDir);
 		frame.openGraph();
 		frame.setVisible(true);
 	}
