@@ -65,16 +65,28 @@ public class CCAchivementFrame extends JFrame {
 
 	private void compileErrorCountAchive(CCAchivementData data) {
 		// コンパイルエラー総発生回数による報酬
-
+		int count = manager.getTotalErrorCount();
+		if (data.getThreshold() > count) {
+			System.out.println("ErrorCount : " + data.getHirotitle() + " : "
+					+ data.getExplanation());
+		}
 	}
 
 	private void compileErrorKindsAchive(CCAchivementData data) {
 		// コンパイルエラー種類による報酬
-
+		int kinds = manager.getAllLists().size();
+		if (data.getThreshold() > kinds) {
+			System.out.println("ErrorKinds : " + data.getHirotitle() + " : "
+					+ data.getExplanation());
+		}
 	}
 
 	private void compileErrorCorrectTimeAchive(CCAchivementData data) {
 		// コンパイルエラー修正時間による報酬
-
+		int correctTime = manager.getAllCorrectTime();
+		if (data.getThreshold() > correctTime) {
+			System.out.println("CorrectTime : " + data.getHirotitle() + " : "
+					+ data.getExplanation());
+		}
 	}
 }
