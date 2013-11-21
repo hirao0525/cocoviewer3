@@ -1,12 +1,12 @@
 package src.coco.view;
 
-import java.awt.Dimension;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
 
+import src.coco.controller.CCAchivementLoader;
+import src.coco.model.CCAchivementData;
 import src.coco.model.CCCompileErrorManager;
 
 public class CCAchivementFrame extends JFrame {
@@ -40,36 +40,41 @@ public class CCAchivementFrame extends JFrame {
 	}
 
 	private void tableSetting() {
-		// TODO: 後でデータだけ書き込んだクラスを作る？
 		// TODO: 称号を判定するプログラムを書く
-		CCAchivementData data = new CCAchivementData();
-		JTable table = new JTable(data.getTabelData(), data.getColumnNames());
-		table.setEnabled(false);
-		JScrollPane scrollpanel = new JScrollPane(table);
-		scrollpanel.setPreferredSize(new Dimension(660, 140));
+		ArrayList<CCAchivementData> data = new ArrayList<CCAchivementData>();
+		CCAchivementLoader loader = new CCAchivementLoader(data);
 
-		jpanel.add(scrollpanel);
-		jpanel.setBounds(10, 10, 680, 150);
+		// TODO hardcoding
+		String filename = "";
+		loader.load(filename);
+
+		compileErrorAchivementsCheck(data);
 	}
 
-	class CCAchivementData {
-		private String[][] tabledata = { { "コンパイルエラー初心者", "初めてコンパイルエラーを経験した" },
-				{ "コンパイルエラー中級者", "コンパイルエラーを30個経験した" },
-				{ "コンパイルエラー上級者", "コンパイルエラーを60個経験した" },
-				{ "コンパイルエラーマスター", "コンパイルエラーを100個経験した" }, };
-
-		private String[] columnNames = { "称号", "称号内容" };
-
-		public CCAchivementData() {
-
+	private void compileErrorAchivementsCheck(ArrayList<CCAchivementData> data) {
+		for (CCAchivementData datum : data) {
+			if (datum.getProperty() == 1) {
+				compileErrorCountAchive(datum);
+			} else if (datum.getProperty() == 2) {
+				compileErrorKindsAchive(datum);
+			} else if (datum.getProperty() == 3) {
+				compileErrorCorrectTimeAchive(datum);
+			}
 		}
+	}
 
-		public String[][] getTabelData() {
-			return tabledata;
-		}
+	private void compileErrorCountAchive(CCAchivementData data) {
+		// コンパイルエラー総発生回数による報酬
 
-		public String[] getColumnNames() {
-			return columnNames;
-		}
+	}
+
+	private void compileErrorKindsAchive(CCAchivementData data) {
+		// コンパイルエラー種類による報酬
+
+	}
+
+	private void compileErrorCorrectTimeAchive(CCAchivementData data) {
+		// コンパイルエラー修正時間による報酬
+
 	}
 }

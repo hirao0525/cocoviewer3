@@ -43,4 +43,15 @@ public class CCCompileErrorManager {
 	public int getMessagesID(String message) {
 		return ids.get(message);
 	}
+
+	public int getAllCorrectTime() {
+		int correctTime = 0;
+		for (CCCompileErrorList errorlist : lists.values()) {
+			for (CCCompileError compileError : errorlist.getErrors()) {
+				correctTime += compileError.getCorrectTime();
+			}
+		}
+
+		return correctTime;
+	}
 }

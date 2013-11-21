@@ -173,7 +173,8 @@ public class CCGraphFrame extends JFrame {
 						if (fileElement.isFile() && fileElement != null) {
 							CFile file = (CFile) fileElement;
 							System.out.println("find!  "
-									+ list.getErrors().get(index));
+									+ list.getErrors().get(index)
+											.getBeginTime());
 							// プログラムファイルの内容を表示する
 							StringBuffer buf = new StringBuffer();
 							String line = "";
