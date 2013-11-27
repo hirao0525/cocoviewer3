@@ -139,7 +139,7 @@ public class CCGraphFrame extends JFrame {
 		// java7からDefaultListModelに格納するクラスを指定しなければならない
 		DefaultListModel<String> model = new DefaultListModel<String>();
 		for (int i = 0; i < list.getErrors().size(); i++) {
-			model.addElement(i + " 回目の修正時間 ： "
+			model.addElement((i + 1) + " 回目の修正時間 ： "
 					+ list.getErrors().get(i).getCorrectTime() + "秒");
 		}
 
@@ -160,6 +160,7 @@ public class CCGraphFrame extends JFrame {
 					String filename = compileError.getFilename();
 
 					// コンパイルエラー発生時のファイルパスを設定
+					// TODO Eclipse対応できてない
 					CPath path = new CPath("\\ppv.data\\cash\\hoge\\"
 							+ projectname + "\\" + beginTime
 							+ "\\ProjectBase\\" + filename);

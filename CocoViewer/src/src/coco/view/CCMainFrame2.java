@@ -21,7 +21,7 @@ public class CCMainFrame2 extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	public static final String APP_NAME = "CoCo Viewer";
-	public static final String VERSION = "0.0.5";
+	public static final String VERSION = "0.0.6";
 
 	// Button Size
 	private static final int ERRORBUTTONWIDTH = 100;

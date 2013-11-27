@@ -29,12 +29,14 @@ public class CCCompileErrorLoader extends CCFileLoader {
 
 		// TODO もう少しきれいに描く
 		if (tokenizer.length == 5) {
+			// 論プロから fileまでがフルパスの想定
 			errorID = Integer.parseInt(tokenizer[0]);
 			projectname = tokenizer[1];
 			filename = tokenizer[2];
 			beginTime = Long.parseLong(tokenizer[3]);
 			correctTime = Integer.parseInt(tokenizer[4]);
 		} else {
+			// CocoViewerStartから
 			errorID = Integer.parseInt(tokenizer[0]);
 			filename = tokenizer[1];
 			beginTime = Long.parseLong(tokenizer[2]);

@@ -109,6 +109,8 @@ public class CCCompileErrorConverter extends CCCsvFileLoader {
 		String filepath = lines.get(2).replace("\\", "/");
 		String[] filepathSegments = filepath.split("/");
 		if (filepathSegments.length > 4) {
+			// 暫定論プロのみ
+			// TODO パスの切り出し方改良
 			projectname = filepathSegments[filepathSegments.length - 4];
 			filename = filepathSegments[filepathSegments.length - 1];
 			// 開始時刻はファイルのフルパスから持ってくる
